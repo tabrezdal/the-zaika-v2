@@ -19,7 +19,7 @@ export function MenuManagementPage() {
 
   const toggleAvailability = (itemId: string) => {
     setItems(items.map(item =>
-      item.id === itemId ? { ...item, active: !(item as any).active } : item
+      item.id === itemId ? { ...item, active: !(item as any).active ?? true } : item
     ));
   };
 

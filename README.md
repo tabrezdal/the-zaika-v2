@@ -1,7 +1,7 @@
 
-  # Customer Conversion Strategy
+  # The Zaika
 
-  This is a code bundle for Customer Conversion Strategy. The original project is available at https://www.figma.com/design/IoDK3im9WsAT5LlTM4YtzI/Customer-Conversion-Strategy.
+  This is a code bundle for The Zaika. The original project is available at https://www.figma.com/design/IoDK3im9WsAT5LlTM4YtzI/The-Zaika.
 
   ## Running the code
 
