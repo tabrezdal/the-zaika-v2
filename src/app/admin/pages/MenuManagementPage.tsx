@@ -4,7 +4,7 @@ import { menuItems } from "../../data/menuData";
 
 export function MenuManagementPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [categoryFilter, setCategory Filter] = useState("All");
+  const [categoryFilter, setCategoryFilter] = useState("All");
   const [items, setItems] = useState(menuItems);
 
   const categories = ["All", "Akni", "Biryani", "Mughlai", "Kathiyawadi", "Desserts"];
