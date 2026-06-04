@@ -10,7 +10,8 @@ import {
   LogOut,
   Menu,
   X,
-  MessageSquare
+  MessageSquare,
+  TrendingUp
 } from "lucide-react";
 import { useState } from "react";
 
@@ -24,6 +25,7 @@ export function AdminLayout() {
     { name: "Menu", path: "/admin/menu", icon: UtensilsCrossed },
     { name: "Customers", path: "/admin/customers", icon: Users },
     { name: "Analytics", path: "/admin/analytics", icon: BarChart3 },
+    { name: "Revenue Sources", path: "/admin/revenue-sources", icon: TrendingUp },
     { name: "Offers", path: "/admin/offers", icon: Tag },
     { name: "Reviews", path: "/admin/reviews", icon: MessageSquare },
     { name: "Settings", path: "/admin/settings", icon: Settings },

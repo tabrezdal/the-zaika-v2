@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { Plus, Search, Edit, Trash2, ToggleLeft, ToggleRight } from "lucide-react";
 import { menuItems } from "../../data/menuData";
+import { AddItemModal } from "../components/AddItemModal";
+import { EditItemModal } from "../components/EditItemModal";
+import { DeleteItemModal } from "../components/DeleteItemModal";
 
 export function MenuManagementPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [items, setItems] = useState(menuItems);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<any>(null);
 
   const categories = ["All", "Akni", "Biryani", "Mughlai", "Kathiyawadi", "Desserts"];
 
@@ -23,6 +30,21 @@ export function MenuManagementPage() {
     ));
   };
 
+  const handleAddItem = (newItem: any) => {
+    setItems([newItem, ...items]);
+  };
+
+  const handleEditItem = (updatedItem: any) => {
+    setItems(items.map(item => item.id === updatedItem.id ? updatedItem : item));
+  };
+
+  const handleDeleteItem = () => {
+    if (selectedItem) {
+      setItems(items.filter(item => item.id !== selectedItem.id));
+      setSelectedItem(null);
+    }
+  };
+
   return (
     <div className="p-6 max-w-7xl mx-auto">
       {/* Header */}
@@ -31,7 +53,10 @@ export function MenuManagementPage() {
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Menu Management</h1>
           <p className="text-gray-600">Add, edit, and manage your menu items</p>
         </div>
-        <button className="bg-orange-600 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-orange-700 transition-colors">
+        <button
+          onClick={() => setIsAddModalOpen(true)}
+          className="bg-orange-600 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-orange-700 transition-colors"
+        >
           <Plus className="w-5 h-5" />
           Add New Item
         </button>
@@ -168,10 +193,22 @@ export function MenuManagementPage() {
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2">
-                        <button className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
+                        <button
+                          onClick={() => {
+                            setSelectedItem(item);
+                            setIsEditModalOpen(true);
+                          }}
+                          className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                        >
                           <Edit className="w-4 h-4" />
                         </button>
-                        <button className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors">
+                        <button
+                          onClick={() => {
+                            setSelectedItem(item);
+                            setIsDeleteModalOpen(true);
+                          }}
+                          className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                        >
                           <Trash2 className="w-4 h-4" />
                         </button>
                       </div>
@@ -183,6 +220,32 @@ export function MenuManagementPage() {
           </table>
         </div>
       </div>
+
+      <AddItemModal
+        isOpen={isAddModalOpen}
+        onClose={() => setIsAddModalOpen(false)}
+        onSubmit={handleAddItem}
+      />
+
+      <EditItemModal
+        isOpen={isEditModalOpen}
+        onClose={() => {
+          setIsEditModalOpen(false);
+          setSelectedItem(null);
+        }}
+        onSubmit={handleEditItem}
+        item={selectedItem}
+      />
+
+      <DeleteItemModal
+        isOpen={isDeleteModalOpen}
+        onClose={() => {
+          setIsDeleteModalOpen(false);
+          setSelectedItem(null);
+        }}
+        onConfirm={handleDeleteItem}
+        itemName={selectedItem?.name || ""}
+      />
     </div>
   );
 }

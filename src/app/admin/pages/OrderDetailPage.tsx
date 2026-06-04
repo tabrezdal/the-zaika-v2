@@ -2,12 +2,16 @@ import { useParams, useNavigate } from "react-router";
 import { ArrowLeft, Phone, MapPin, CreditCard, Clock, Package } from "lucide-react";
 import { mockOrders } from "../data/mockAdminData";
 import { useState } from "react";
+import { CancelOrderModal } from "../components/CancelOrderModal";
+import { OrderCancelledSuccessModal } from "../components/OrderCancelledSuccessModal";
 
 export function OrderDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const order = mockOrders.find((o) => o.id === id);
   const [currentStatus, setCurrentStatus] = useState(order?.status || 'pending');
+  const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
 
   if (!order) {
     return (
@@ -38,6 +42,14 @@ export function OrderDetailPage() {
   const handleStatusUpdate = (newStatus: string) => {
     setCurrentStatus(newStatus);
     // In real app, would call API to update status
+  };
+
+  const handleCancelOrder = (reason: string, customReason?: string) => {
+    setCurrentStatus('cancelled');
+    setIsCancelModalOpen(false);
+    setIsSuccessModalOpen(true);
+    // In real app, would call API to cancel order with reason
+    console.log('Order cancelled:', reason, customReason);
   };
 
   const getStatusColor = (status: string) => {
@@ -228,7 +240,10 @@ export function OrderDetailPage() {
                 Contact Customer
               </button>
               {currentStatus !== 'cancelled' && currentStatus !== 'delivered' && (
-                <button className="w-full border border-red-300 text-red-600 py-2 px-4 rounded-lg hover:bg-red-50 transition-colors">
+                <button
+                  onClick={() => setIsCancelModalOpen(true)}
+                  className="w-full border border-red-300 text-red-600 py-2 px-4 rounded-lg hover:bg-red-50 transition-colors"
+                >
                   Cancel Order
                 </button>
               )}
@@ -236,6 +251,18 @@ export function OrderDetailPage() {
           </div>
         </div>
       </div>
+
+      <CancelOrderModal
+        isOpen={isCancelModalOpen}
+        onClose={() => setIsCancelModalOpen(false)}
+        onConfirm={handleCancelOrder}
+        orderNumber={order.orderNumber}
+      />
+
+      <OrderCancelledSuccessModal
+        isOpen={isSuccessModalOpen}
+        orderNumber={order.orderNumber}
+      />
     </div>
   );
 }

@@ -28,6 +28,7 @@ import { AnalyticsPage } from "./admin/pages/AnalyticsPage";
 import { OffersPage } from "./admin/pages/OffersPage";
 import { ReviewsPage } from "./admin/pages/ReviewsPage";
 import { SettingsPage } from "./admin/pages/SettingsPage";
+import { RevenueSourcesPage } from "./admin/pages/RevenueSourcesPage";
 
 export default function App() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="menu" element={<MenuManagementPage />} />
             <Route path="customers" element={<CustomersPage />} />
             <Route path="analytics" element={<AnalyticsPage />} />
+            <Route path="revenue-sources" element={<RevenueSourcesPage />} />
             <Route path="offers" element={<OffersPage />} />
             <Route path="reviews" element={<ReviewsPage />} />
             <Route path="settings" element={<SettingsPage />} />

@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Search, Eye, Mail, Phone, Gift } from "lucide-react";
 import { mockCustomers, type Customer } from "../data/mockAdminData";
+import { CustomerDetailModal } from "../components/CustomerDetailModal";
 
 export function CustomersPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [segmentFilter, setSegmentFilter] = useState("all");
+  const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
+  const [selectedCustomer, setSelectedCustomer] = useState<any>(null);
 
   const filteredCustomers = mockCustomers.filter((customer) => {
     const matchesSearch =
@@ -124,14 +127,20 @@ export function CustomersPage() {
                   </td>
                   <td className="px-6 py-4">
                     <div className="space-y-1">
-                      <div className="flex items-center gap-2 text-sm text-gray-900">
-                        <Phone className="w-4 h-4 text-gray-400" />
+                      <a
+                        href={`tel:${customer.phone}`}
+                        className="flex items-center gap-2 text-sm text-orange-600 hover:text-orange-700"
+                      >
+                        <Phone className="w-4 h-4" />
                         {customer.phone}
-                      </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Mail className="w-4 h-4 text-gray-400" />
+                      </a>
+                      <a
+                        href={`mailto:${customer.email}`}
+                        className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700"
+                      >
+                        <Mail className="w-4 h-4" />
                         {customer.email}
-                      </div>
+                      </a>
                     </div>
                   </td>
                   <td className="px-6 py-4">
@@ -155,7 +164,13 @@ export function CustomersPage() {
                     {new Date(customer.lastOrderDate).toLocaleDateString('en-IN', { month: 'short', day: 'numeric' })}
                   </td>
                   <td className="px-6 py-4">
-                    <button className="inline-flex items-center gap-1 text-sm text-orange-600 hover:text-orange-700 font-medium">
+                    <button
+                      onClick={() => {
+                        setSelectedCustomer(customer);
+                        setIsDetailModalOpen(true);
+                      }}
+                      className="inline-flex items-center gap-1 text-sm text-orange-600 hover:text-orange-700 font-medium"
+                    >
                       <Eye className="w-4 h-4" />
                       View
                     </button>
@@ -166,6 +181,15 @@ export function CustomersPage() {
           </table>
         </div>
       </div>
+
+      <CustomerDetailModal
+        isOpen={isDetailModalOpen}
+        onClose={() => {
+          setIsDetailModalOpen(false);
+          setSelectedCustomer(null);
+        }}
+        customer={selectedCustomer}
+      />
     </div>
   );
 }
