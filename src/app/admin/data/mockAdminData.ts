@@ -48,7 +48,7 @@ export const mockOrders: Order[] = [
     id: '1',
     orderNumber: 'ORD001',
     customerName: 'Rajesh Patel',
-    customerPhone: '+91 98765 43210',
+    customerPhone: '+91 7405407034',
     items: [
       { name: 'Signature Chicken Akni', quantity: 2, price: 280 },
       { name: 'Gulab Jamun', quantity: 1, price: 80 }
@@ -129,7 +129,7 @@ export const mockCustomers: Customer[] = [
   {
     id: '1',
     name: 'Rajesh Patel',
-    phone: '+91 98765 43210',
+    phone: '+91 7405407034',
     email: 'rajesh@example.com',
     totalOrders: 24,
     totalSpent: 12600,

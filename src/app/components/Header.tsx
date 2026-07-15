@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router";
 import { ShoppingCart, Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
+import logo from "../images/brand-logo/the-zaika-logo.webp";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,11 +23,12 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
-              <span className="text-white text-xl font-bold">Z</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">The Zaika</span>
+          <Link to="/" className="flex items-center gap-2 min-w-0">
+            <img
+              src={logo}
+              alt="The Zaika logo"
+              className="h-12 w-auto object-contain shrink-0"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -247,12 +247,12 @@ export type Database = {
 ```typescript
 // Request OTP
 const { error } = await supabase.auth.signInWithOtp({
-  phone: '+919876543210',
+  phone: '+917405407034',
 });
 
 // Verify OTP
 const { data, error } = await supabase.auth.verifyOtp({
-  phone: '+919876543210',
+  phone: '+917405407034',
   token: '123456',
   type: 'sms',
 });

@@ -68,7 +68,7 @@ export function AccountPage() {
                   RK
                 </div>
                 <h3 className="font-bold text-lg">Rajesh Kumar</h3>
-                <p className="text-gray-600 text-sm">+91 98765 43210</p>
+                <p className="text-gray-600 text-sm">+91 7405407034</p>
               </div>
               <nav className="space-y-2">
                 {tabs.map((tab) => {
@@ -123,7 +123,7 @@ export function AccountPage() {
                     <label className="block text-sm font-medium mb-2">Phone Number</label>
                     <input
                       type="tel"
-                      defaultValue="+91 98765 43210"
+                      defaultValue="+91 7405407034"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>

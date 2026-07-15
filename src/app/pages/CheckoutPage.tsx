@@ -134,7 +134,7 @@ export function CheckoutPage() {
                       onChange={(e) =>
                         setOrderData({ ...orderData, phone: e.target.value })
                       }
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 7405407034"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>

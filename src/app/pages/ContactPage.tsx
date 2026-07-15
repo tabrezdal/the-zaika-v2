@@ -18,7 +18,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Phone</h3>
-                  <p className="text-gray-700">+91 98765 43210</p>
+                  <p className="text-gray-700">+91 7405407034</p>
                   <p className="text-sm text-gray-600">Available 10 AM - 10 PM</p>
                 </div>
               </div>
@@ -29,7 +29,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Email</h3>
-                  <p className="text-gray-700">hello@thezaika.com</p>
+                  <p className="text-gray-700">thezaika24@gmail.com</p>
                   <p className="text-sm text-gray-600">We&apos;ll respond within 24 hours</p>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export function ContactPage() {
             <div className="bg-green-50 border border-green-200 rounded-lg p-4">
               <p className="text-green-900 mb-3 font-medium">Need a quick response?</p>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917405407034"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
@@ -88,7 +88,7 @@ export function ContactPage() {
                 <label className="block text-sm font-medium mb-2">Phone</label>
                 <input
                   type="tel"
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 7405407034"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 />
               </div>
