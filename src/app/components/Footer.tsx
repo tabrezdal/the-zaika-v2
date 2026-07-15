@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Facebook, Instagram, Twitter, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -105,14 +105,17 @@ export function Footer() {
               </li>
             </ul>
             <div className="flex gap-4 mt-6">
-              <a href="#" className="hover:text-orange-500 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=100093371474536" className="hover:text-orange-500 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-orange-500 transition-colors">
+              <a href="https://www.instagram.com/thezaika_restaurant/" className="hover:text-orange-500 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-orange-500 transition-colors">
+              {/* <a href="#" className="hover:text-orange-500 transition-colors">
                 <Twitter className="w-5 h-5" />
+              </a> */}
+              <a href="https://www.linkedin.com/company/the-zaika" className="hover:text-orange-500 transition-colors">
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
