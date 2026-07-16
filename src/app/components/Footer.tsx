@@ -110,16 +110,16 @@ export function Footer() {
               </li>
             </ul>
             <div className="flex gap-4 mt-6">
-              <a href="https://www.facebook.com/profile.php?id=100093371474536" className="hover:text-orange-500 transition-colors">
+              <a href={CONTACT_INFO.facebook} className="hover:text-orange-500 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/thezaika_restaurant/" className="hover:text-orange-500 transition-colors">
+              <a href={CONTACT_INFO.instagram} className="hover:text-orange-500 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5" />
               </a>
               {/* <a href="#" className="hover:text-orange-500 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a> */}
-              <a href="https://www.linkedin.com/company/the-zaika" className="hover:text-orange-500 transition-colors">
+              <a href={CONTACT_INFO.linkedin} className="hover:text-orange-500 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
