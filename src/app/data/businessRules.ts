@@ -49,7 +49,7 @@ export const isMinimumOrderMet = (orderAmount: number): boolean => {
 };
 
 export const CONTACT_INFO = {
-  phone: "+91 98765 43210", // TODO: replace with real business phone number
-  whatsapp: "919876543210", // TODO: WhatsApp number for orders — digits only, country code first, no + or spaces (e.g. 919876543210 for +91 98765 43210)
-  email: "hello@thezaika.com", // TODO: replace with real business email
+  phone: "+917405407034", // TODO: replace with real business phone number
+  whatsapp: "+917405407034", // TODO: WhatsApp number for orders — digits only, country code first, no + or spaces (e.g. 919876543210 for +91 98765 43210)
+  email: "thezaika24@gmail.com", // TODO: replace with real business email
 };

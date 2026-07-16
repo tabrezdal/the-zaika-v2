@@ -19,7 +19,9 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Phone</h3>
-                  <p className="text-gray-700">{CONTACT_INFO.phone}</p>
+                  <a href={`tel:${CONTACT_INFO.phone}`} className="text-gray-700 hover:text-orange-500 transition-colors">
+                    {CONTACT_INFO.phone}
+                  </a>
                   <p className="text-sm text-gray-600">Available 10 AM - 10 PM</p>
                 </div>
               </div>
@@ -30,7 +32,9 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Email</h3>
-                  <p className="text-gray-700">{CONTACT_INFO.email}</p>
+                  <a href={`mailto:${CONTACT_INFO.email}`} className="text-gray-700 hover:text-orange-500 transition-colors">
+                    {CONTACT_INFO.email}
+                  </a>
                   <p className="text-sm text-gray-600">We&apos;ll respond within 24 hours</p>
                 </div>
               </div>
