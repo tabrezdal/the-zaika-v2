@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin } from "lucide-react";
+import { CONTACT_INFO } from "../data/businessRules";
 
 export function Footer() {
   return (
@@ -65,9 +66,9 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/account/orders" className="hover:text-orange-500 transition-colors">
-                  Track Order
-                </Link>
+                <span className="text-gray-500 cursor-not-allowed" title="Launching soon">
+                  Track Order <span className="text-xs">(Soon)</span>
+                </span>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-orange-500 transition-colors">
@@ -93,11 +94,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>+91 7405407034</span>
+                <span>{CONTACT_INFO.phone}</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>thezaika24@gmail.com</span>
+                <span>{CONTACT_INFO.email}</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />

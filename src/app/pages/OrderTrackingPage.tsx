@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router";
 import { CheckCircle, Clock, Package, Truck, Home } from "lucide-react";
+import { ComingSoonOverlay } from "../components/ComingSoonOverlay";
 
 export function OrderTrackingPage() {
   const [searchParams] = useSearchParams();
@@ -17,13 +18,14 @@ export function OrderTrackingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-xl p-8 shadow-lg">
-          <h1 className="text-3xl font-bold mb-2">Track Your Order</h1>
-          {orderId && (
-            <p className="text-gray-600 mb-8">
-              Order ID: <span className="font-mono font-medium">{orderId}</span>
-            </p>
-          )}
+        <ComingSoonOverlay label="Live Order Tracking — Launching Soon">
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h1 className="text-3xl font-bold mb-2">Track Your Order</h1>
+            {orderId && (
+              <p className="text-gray-600 mb-8">
+                Order ID: <span className="font-mono font-medium">{orderId}</span>
+              </p>
+            )}
 
           {/* Delivery ETA */}
           <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-6 mb-8 text-center">
@@ -88,7 +90,8 @@ export function OrderTrackingPage() {
               <p className="text-orange-600 font-medium">🔥 Your food is being cooked fresh</p>
             </div>
           </div>
-        </div>
+          </div>
+        </ComingSoonOverlay>
       </div>
     </div>
   );

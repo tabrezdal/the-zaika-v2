@@ -1,19 +1,23 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useCart } from "../context/CartContext";
-import { ChevronLeft, MapPin, Clock, CreditCard, CheckCircle } from "lucide-react";
+import { ChevronLeft, MapPin, Clock, CreditCard, CheckCircle, MessageCircle } from "lucide-react";
+import { calculateDeliveryFee } from "../data/businessRules";
+import { buildWhatsAppOrderMessage, getWhatsAppOrderLink } from "../utils/whatsappOrder";
 
 export function CheckoutPage() {
   const navigate = useNavigate();
   const { cart, cartTotal, clearCart } = useCart();
   const [step, setStep] = useState(1);
   const [orderData, setOrderData] = useState({
+    name: "",
     address: "",
     city: "",
     phone: "",
     deliverySlot: "",
     paymentMethod: "",
   });
+  const deliveryFee = calculateDeliveryFee(cartTotal);
 
   if (cart.length === 0) {
     return (
@@ -42,6 +46,21 @@ export function CheckoutPage() {
 
   const handlePlaceOrder = () => {
     const orderId = `ORD${Date.now()}`;
+    const message = buildWhatsAppOrderMessage(
+      cart,
+      {
+        name: orderData.name,
+        phone: orderData.phone,
+        address: orderData.address,
+        city: orderData.city,
+        deliverySlot: orderData.deliverySlot,
+        paymentPreference: orderData.paymentMethod,
+      },
+      orderId
+    );
+    const waLink = getWhatsAppOrderLink(message);
+
+    window.open(waLink, "_blank", "noopener,noreferrer");
     clearCart();
     navigate(`/order-success?orderId=${orderId}`);
   };
@@ -103,6 +122,16 @@ export function CheckoutPage() {
                 <h2 className="text-2xl font-bold mb-6">Delivery Address</h2>
                 <div className="space-y-4">
                   <div>
+                    <label className="block text-sm font-medium mb-2">Full Name</label>
+                    <input
+                      type="text"
+                      value={orderData.name}
+                      onChange={(e) => setOrderData({ ...orderData, name: e.target.value })}
+                      placeholder="Your name"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                  </div>
+                  <div>
                     <label className="block text-sm font-medium mb-2">Full Address</label>
                     <input
                       type="text"
@@ -134,13 +163,13 @@ export function CheckoutPage() {
                       onChange={(e) =>
                         setOrderData({ ...orderData, phone: e.target.value })
                       }
-                      placeholder="+91 7405407034"
+                      placeholder="+91 98765 43210"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
                   <button
                     onClick={() => setStep(2)}
-                    disabled={!orderData.address || !orderData.city || !orderData.phone}
+                    disabled={!orderData.name || !orderData.address || !orderData.city || !orderData.phone}
                     className="w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
                   >
                     Continue to Delivery Slot
@@ -194,28 +223,29 @@ export function CheckoutPage() {
             {/* Step 3: Payment */}
             {step === 3 && (
               <div className="bg-white rounded-xl p-6">
-                <h2 className="text-2xl font-bold mb-6">Payment Method</h2>
+                <h2 className="text-2xl font-bold mb-2">Payment Preference</h2>
+                <p className="text-sm text-gray-600 mb-6">
+                  Let us know how you&apos;d like to pay — we&apos;ll note it for our delivery team. No online payment is collected here.
+                </p>
                 <div className="space-y-3">
-                  {["Cash on Delivery", "UPI", "Credit/Debit Card", "Net Banking"].map(
-                    (method) => (
-                      <label
-                        key={method}
-                        className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-orange-600 transition-colors"
-                      >
-                        <input
-                          type="radio"
-                          name="paymentMethod"
-                          value={method}
-                          checked={orderData.paymentMethod === method}
-                          onChange={(e) =>
-                            setOrderData({ ...orderData, paymentMethod: e.target.value })
-                          }
-                          className="w-5 h-5 text-orange-600"
-                        />
-                        <span className="font-medium">{method}</span>
-                      </label>
-                    )
-                  )}
+                  {["Cash on Delivery", "UPI (Pay via QR at delivery)"].map((method) => (
+                    <label
+                      key={method}
+                      className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-orange-600 transition-colors"
+                    >
+                      <input
+                        type="radio"
+                        name="paymentMethod"
+                        value={method}
+                        checked={orderData.paymentMethod === method}
+                        onChange={(e) =>
+                          setOrderData({ ...orderData, paymentMethod: e.target.value })
+                        }
+                        className="w-5 h-5 text-orange-600"
+                      />
+                      <span className="font-medium">{method}</span>
+                    </label>
+                  ))}
                 </div>
                 <div className="flex gap-4 mt-6">
                   <button
@@ -241,21 +271,26 @@ export function CheckoutPage() {
                 <h2 className="text-2xl font-bold mb-6">Review Your Order</h2>
                 <div className="space-y-4 mb-6">
                   <div>
-                    <h3 className="font-bold mb-2">Delivery Address</h3>
-                    <p className="text-gray-700">
-                      {orderData.address}, {orderData.city}
-                    </p>
+                    <h3 className="font-bold mb-2">Contact</h3>
+                    <p className="text-gray-700">{orderData.name}</p>
                     <p className="text-gray-700">{orderData.phone}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-bold mb-2">Delivery Address</h3>
+                    <p className="text-gray-700">{orderData.address}, {orderData.city}</p>
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">Delivery Time</h3>
                     <p className="text-gray-700">{orderData.deliverySlot}</p>
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2">Payment Method</h3>
+                    <h3 className="font-bold mb-2">Payment Preference</h3>
                     <p className="text-gray-700">{orderData.paymentMethod}</p>
                   </div>
                 </div>
+                <p className="text-sm text-gray-500 mb-4">
+                  Tapping the button below opens WhatsApp with your order pre-filled. Just hit <strong>Send</strong> there to place it with The Zaika.
+                </p>
                 <div className="flex gap-4">
                   <button
                     onClick={() => setStep(3)}
@@ -265,9 +300,10 @@ export function CheckoutPage() {
                   </button>
                   <button
                     onClick={handlePlaceOrder}
-                    className="flex-1 bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors"
+                    className="flex-1 bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
                   >
-                    Place Order
+                    <MessageCircle className="w-5 h-5" />
+                    Send Order via WhatsApp
                   </button>
                 </div>
               </div>
@@ -295,11 +331,15 @@ export function CheckoutPage() {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span>Delivery Fee</span>
-                  <span className="text-green-600">Free</span>
+                  {deliveryFee === 0 ? (
+                    <span className="text-green-600">FREE</span>
+                  ) : (
+                    <span>₹{deliveryFee}</span>
+                  )}
                 </div>
                 <div className="flex justify-between font-bold text-lg pt-2 border-t border-gray-200">
                   <span>Total</span>
-                  <span className="text-orange-600">₹{cartTotal}</span>
+                  <span className="text-orange-600">₹{cartTotal + deliveryFee}</span>
                 </div>
               </div>
             </div>

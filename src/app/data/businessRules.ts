@@ -47,3 +47,9 @@ export const calculateDeliveryFee = (orderAmount: number): number => {
 export const isMinimumOrderMet = (orderAmount: number): boolean => {
   return orderAmount >= BUSINESS_RULES.MINIMUM_ORDER_VALUE;
 };
+
+export const CONTACT_INFO = {
+  phone: "+91 98765 43210", // TODO: replace with real business phone number
+  whatsapp: "919876543210", // TODO: WhatsApp number for orders — digits only, country code first, no + or spaces (e.g. 919876543210 for +91 98765 43210)
+  email: "hello@thezaika.com", // TODO: replace with real business email
+};

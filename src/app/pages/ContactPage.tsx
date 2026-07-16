@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { CONTACT_INFO, BUSINESS_RULES } from "../data/businessRules";
 
 export function ContactPage() {
   return (
@@ -18,7 +19,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Phone</h3>
-                  <p className="text-gray-700">+91 7405407034</p>
+                  <p className="text-gray-700">{CONTACT_INFO.phone}</p>
                   <p className="text-sm text-gray-600">Available 10 AM - 10 PM</p>
                 </div>
               </div>
@@ -29,7 +30,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Email</h3>
-                  <p className="text-gray-700">thezaika24@gmail.com</p>
+                  <p className="text-gray-700">{CONTACT_INFO.email}</p>
                   <p className="text-sm text-gray-600">We&apos;ll respond within 24 hours</p>
                 </div>
               </div>
@@ -61,7 +62,7 @@ export function ContactPage() {
             <div className="bg-green-50 border border-green-200 rounded-lg p-4">
               <p className="text-green-900 mb-3 font-medium">Need a quick response?</p>
               <a
-                href="https://wa.me/917405407034"
+                href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
@@ -138,7 +139,7 @@ export function ContactPage() {
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="font-bold text-lg mb-2">Do you have minimum order value?</h3>
               <p className="text-gray-700">
-                No minimum order value! Order as little or as much as you like.
+                Yes — the minimum order value is ₹{BUSINESS_RULES.MINIMUM_ORDER_VALUE}, and delivery is free on orders above ₹{BUSINESS_RULES.FREE_DELIVERY_THRESHOLD}.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
