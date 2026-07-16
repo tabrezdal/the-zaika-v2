@@ -197,7 +197,7 @@ export function HomePage() {
 
           {/* Category Tabs */}
           <div className="flex justify-center gap-4 mb-12 flex-wrap">
-            {["Akni", "Biryani", "Mughlai", "Kathiyawadi"].map((category) => (
+            {["Akni", "Rice & Biryani", "Chicken Starters", "Pizzas", "Burgers", "Beverages"].map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}

@@ -22,14 +22,20 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/loyalty" className="hover:text-orange-500 transition-colors">
+                {/* <Link to="/loyalty" className="hover:text-orange-500 transition-colors">
                   Loyalty Program
-                </Link>
+                </Link> */}
+                <span className="text-gray-500 cursor-not-allowed" title="Launching soon">
+                  Loyalty Program <span className="text-xs">(Soon)</span>
+                </span>
               </li>
               <li>
-                <Link to="/referral" className="hover:text-orange-500 transition-colors">
+                {/* <Link to="/referral" className="hover:text-orange-500 transition-colors">
                   Referral Program
-                </Link>
+                </Link> */}
+                <span className="text-gray-500 cursor-not-allowed" title="Launching soon">
+                  Referral Program <span className="text-xs">(Soon)</span>
+                </span>
               </li>
             </ul>
           </div>
@@ -38,26 +44,10 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Menu</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/menu?category=Akni" className="hover:text-orange-500 transition-colors">
-                  Akni
-                </Link>
-              </li>
-              <li>
-                <Link to="/menu?category=Biryani" className="hover:text-orange-500 transition-colors">
-                  Biryani
-                </Link>
-              </li>
-              <li>
-                <Link to="/menu?category=Mughlai" className="hover:text-orange-500 transition-colors">
-                  Mughlai
-                </Link>
-              </li>
-              <li>
-                <Link to="/menu?category=Kathiyawadi" className="hover:text-orange-500 transition-colors">
-                  Kathiyawadi
-                </Link>
-              </li>
+              <li><Link to="/menu?category=Akni" className="hover:text-orange-500 transition-colors">Akni</Link></li>
+              <li><Link to={`/menu?category=${encodeURIComponent("Rice & Biryani")}`} className="hover:text-orange-500 transition-colors">Biryani</Link></li>
+              <li><Link to="/menu?category=Pizzas" className="hover:text-orange-500 transition-colors">Pizza</Link></li>
+              <li><Link to="/menu?category=Burgers" className="hover:text-orange-500 transition-colors">Burgers</Link></li>
             </ul>
           </div>
 

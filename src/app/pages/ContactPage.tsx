@@ -45,7 +45,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Address</h3>
-                  <p className="text-gray-700">Cloud Kitchen, Sarkhej</p>
+                  <p className="text-gray-700">TP-85, Sarkhej</p>
                   <p className="text-gray-700">Ahmedabad, Gujarat 380055</p>
                 </div>
               </div>
@@ -57,7 +57,7 @@ export function ContactPage() {
                 <div>
                   <h3 className="font-bold mb-1">Operating Hours</h3>
                   <p className="text-gray-700">Monday - Sunday</p>
-                  <p className="text-gray-700">11:00 AM - 10:00 PM</p>
+                  <p className="text-gray-700">11:00 AM - 11:00 PM</p>
                 </div>
               </div>
             </div>
