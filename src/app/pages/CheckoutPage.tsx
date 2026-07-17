@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useCart } from "../context/CartContext";
-import { ChevronLeft, MapPin, Clock, CreditCard, CheckCircle, MessageCircle } from "lucide-react";
-import { calculateDeliveryFee } from "../data/businessRules";
+import { ChevronLeft, MapPin, Clock, CreditCard, CheckCircle, MessageCircle, Truck, Info } from "lucide-react";
+import { calculateDeliveryFee, OPERATING_HOURS } from "../data/businessRules";
 import { buildWhatsAppOrderMessage, getWhatsAppOrderLink } from "../utils/whatsappOrder";
+import { generateScheduledSlots } from "../utils/deliverySlots";
 
 export function CheckoutPage() {
   const navigate = useNavigate();
@@ -14,7 +15,8 @@ export function CheckoutPage() {
     address: "",
     city: "",
     phone: "",
-    deliverySlot: "",
+    deliveryType: "normal" as "normal" | "scheduled",
+    deliverySlot: "Standard Delivery (ASAP)",
     paymentMethod: "",
   });
   const deliveryFee = calculateDeliveryFee(cartTotal);
@@ -35,14 +37,7 @@ export function CheckoutPage() {
     );
   }
 
-  const deliverySlots = [
-    "Today, 12:00 PM - 1:00 PM",
-    "Today, 1:00 PM - 2:00 PM",
-    "Today, 7:00 PM - 8:00 PM",
-    "Today, 8:00 PM - 9:00 PM",
-    "Tomorrow, 12:00 PM - 1:00 PM",
-    "Tomorrow, 7:00 PM - 8:00 PM",
-  ];
+  const scheduledSlots = generateScheduledSlots(OPERATING_HOURS.OPENING_TIME, OPERATING_HOURS.CLOSING_TIME);
 
   const handlePlaceOrder = () => {
     const orderId = `ORD${Date.now()}`;
@@ -53,6 +48,7 @@ export function CheckoutPage() {
         phone: orderData.phone,
         address: orderData.address,
         city: orderData.city,
+        deliveryType: orderData.deliveryType,
         deliverySlot: orderData.deliverySlot,
         paymentPreference: orderData.paymentMethod,
       },
@@ -182,26 +178,79 @@ export function CheckoutPage() {
             {step === 2 && (
               <div className="bg-white rounded-xl p-6">
                 <h2 className="text-2xl font-bold mb-6">Select Delivery Time</h2>
-                <div className="space-y-3">
-                  {deliverySlots.map((slot) => (
-                    <label
-                      key={slot}
-                      className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-orange-600 transition-colors"
-                    >
-                      <input
-                        type="radio"
-                        name="deliverySlot"
-                        value={slot}
-                        checked={orderData.deliverySlot === slot}
-                        onChange={(e) =>
-                          setOrderData({ ...orderData, deliverySlot: e.target.value })
-                        }
-                        className="w-5 h-5 text-orange-600"
-                      />
-                      <span className="font-medium">{slot}</span>
-                    </label>
-                  ))}
+
+                {/* Tabs */}
+                <div className="flex gap-2 mb-6 border-b border-gray-200">
+                  <button
+                    onClick={() =>
+                      setOrderData({ ...orderData, deliveryType: "normal", deliverySlot: "Standard Delivery (ASAP)" })
+                    }
+                    className={`px-4 py-3 font-medium border-b-2 transition-colors ${
+                      orderData.deliveryType === "normal"
+                        ? "border-orange-600 text-orange-600"
+                        : "border-transparent text-gray-500 hover:text-gray-700"
+                    }`}
+                  >
+                    Normal Delivery
+                  </button>
+                  <button
+                    onClick={() => setOrderData({ ...orderData, deliveryType: "scheduled", deliverySlot: "" })}
+                    className={`px-4 py-3 font-medium border-b-2 transition-colors ${
+                      orderData.deliveryType === "scheduled"
+                        ? "border-orange-600 text-orange-600"
+                        : "border-transparent text-gray-500 hover:text-gray-700"
+                    }`}
+                  >
+                    Schedule Delivery
+                  </button>
                 </div>
+
+                {/* Normal Delivery */}
+                {orderData.deliveryType === "normal" && (
+                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-5">
+                    <div className="flex items-start gap-3">
+                      <Truck className="w-6 h-6 text-orange-600 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-gray-900 mb-1">Standard Delivery</p>
+                        <p className="text-sm text-gray-700">
+                          Your order is prepared and delivered as soon as possible -- the same way Zomato or Swiggy delivers, no need to pick a time.
+                          We&apos;ll send status updates on WhatsApp as your order moves from the kitchen to your door.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Schedule Delivery */}
+                {orderData.deliveryType === "scheduled" && (
+                  <div>
+                    {scheduledSlots.length === 0 ? (
+                      <div className="bg-gray-50 border border-gray-200 rounded-lg p-5 text-center text-gray-600">
+                        We&apos;re closed for scheduling right now. We&apos;re open {OPERATING_HOURS.DISPLAY} -- please check back during those hours, or choose Normal Delivery.
+                      </div>
+                    ) : (
+                      <div className="space-y-3 max-h-80 overflow-y-auto">
+                        {scheduledSlots.map((slot) => (
+                          <label
+                            key={slot}
+                            className="flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer hover:border-orange-600 transition-colors"
+                          >
+                            <input
+                              type="radio"
+                              name="deliverySlot"
+                              value={slot}
+                              checked={orderData.deliverySlot === slot}
+                              onChange={(e) => setOrderData({ ...orderData, deliverySlot: e.target.value })}
+                              className="w-5 h-5 text-orange-600"
+                            />
+                            <span className="font-medium">{slot}</span>
+                          </label>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 <div className="flex gap-4 mt-6">
                   <button
                     onClick={() => setStep(1)}
@@ -224,9 +273,15 @@ export function CheckoutPage() {
             {step === 3 && (
               <div className="bg-white rounded-xl p-6">
                 <h2 className="text-2xl font-bold mb-2">Payment Preference</h2>
-                <p className="text-sm text-gray-600 mb-6">
+                <p className="text-sm text-gray-600 mb-4">
                   Let us know how you&apos;d like to pay — we&apos;ll note it for our delivery team. No online payment is collected here.
                 </p>
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-6 flex items-start gap-2">
+                  <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-blue-900">
+                    We&apos;re working on secure online payments within the site — coming soon! For now, just let us know your preference below.
+                  </p>
+                </div>
                 <div className="space-y-3">
                   {["Cash on Delivery", "UPI (Pay via QR at delivery)"].map((method) => (
                     <label

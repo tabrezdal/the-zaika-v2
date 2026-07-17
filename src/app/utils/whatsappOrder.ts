@@ -10,6 +10,7 @@ export interface WhatsAppOrderCustomer {
   phone: string;
   address: string;
   city: string;
+  deliveryType?: "normal" | "scheduled";
   deliverySlot: string;
   paymentPreference: string;
 }
@@ -37,7 +38,7 @@ export function buildWhatsAppOrderMessage(
     `*Delivery Address:*`,
     `${customer.address}, ${customer.city}`,
     ``,
-    `*Delivery Slot:* ${customer.deliverySlot}`,
+    `*Delivery:* ${customer.deliveryType === "scheduled" ? `Scheduled — ${customer.deliverySlot}` : customer.deliveryType === "normal" ? "Standard (as soon as possible)" : customer.deliverySlot}`,
     ``,
     `*Order Items:*`,
     itemLines,

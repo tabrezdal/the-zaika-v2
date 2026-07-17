@@ -56,3 +56,9 @@ export const CONTACT_INFO = {
   facebook: "https://www.facebook.com/profile.php?id=100093371474536", // TODO: replace with real business Facebook URL
   linkedin: "https://www.linkedin.com/company/the-zaika", // TODO: replace with real business LinkedIn URL
 };
+
+export const OPERATING_HOURS = {
+  OPENING_TIME: "11:00", // 24hr HH:MM
+  CLOSING_TIME: "23:00", // 24hr HH:MM (11:00 PM)
+  DISPLAY: "11:00 AM - 11:00 PM",
+};
