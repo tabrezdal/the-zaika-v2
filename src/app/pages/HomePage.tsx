@@ -4,6 +4,7 @@ import { menuItems, deliveryAreas, testimonials } from "../data/menuData";
 import { useCart } from "../context/CartContext";
 import { useState } from "react";
 import { SEO } from "../components/SEO";
+import { resolveMenuImage } from "../utils/resolveMenuImage";
 
 export function HomePage() {
   const { addToCart } = useCart();
@@ -51,8 +52,8 @@ export function HomePage() {
             {/* Right Image + Floating Cards */}
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
-                alt="Chicken Akni"
+                src={resolveMenuImage("Chicken_Akni.png")}
+                alt="Signature Chicken Akni"
                 className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />
               {/* Floating Cards */}
@@ -136,8 +137,8 @@ export function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1606471191009-63994c53433b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
-                alt="Why Choose Us"
+                src={resolveMenuImage("Margherita Pizza.png")}
+                alt="Margherita Pizza"
                 className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
               />
             </div>
