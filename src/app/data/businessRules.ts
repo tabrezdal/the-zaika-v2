@@ -62,3 +62,8 @@ export const OPERATING_HOURS = {
   CLOSING_TIME: "23:00", // 24hr HH:MM (11:00 PM)
   DISPLAY: "11:00 AM - 11:00 PM",
 };
+
+export const AGGREGATOR_LINKS = {
+  zomato: "https://link.zomato.com/xqzv/rshare?id=480106703056330b",
+  swiggy: "https://www.swiggy.com/direct/brand/215551?source=swiggy-direct&subSource=generic",
+};

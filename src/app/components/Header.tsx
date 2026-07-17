@@ -3,6 +3,7 @@ import { ShoppingCart, Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import logo from "../images/brand-logo/the-zaika-logo.webp";
+import { AGGREGATOR_LINKS } from "../data/businessRules";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,6 +48,26 @@ export function Header() {
               </Link>
             ))}
           </nav>
+
+          {/* Aggregator links -- desktop only, mobile version added below */}
+          <div className="hidden lg:flex items-center gap-2">
+            <a
+              href={AGGREGATOR_LINKS.zomato}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 text-xs font-medium border border-red-600 text-red-600 rounded-full hover:bg-red-50 transition-colors whitespace-nowrap"
+            >
+              Order on Zomato
+            </a>
+            <a
+              href={AGGREGATOR_LINKS.swiggy}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 text-xs font-medium border border-orange-500 text-orange-500 rounded-full hover:bg-orange-50 transition-colors whitespace-nowrap"
+            >
+              Order on Swiggy
+            </a>
+          </div>
 
           {/* Actions */}
           <div className="flex items-center gap-4">
@@ -102,6 +123,24 @@ export function Header() {
                   {link.name}
                 </Link>
               ))}
+              <div className="flex gap-3 pt-2 border-t border-gray-100">
+                <a
+                  href={AGGREGATOR_LINKS.zomato}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center px-3 py-2 text-sm font-medium border border-red-600 text-red-600 rounded-lg"
+                >
+                  Zomato
+                </a>
+                <a
+                  href={AGGREGATOR_LINKS.swiggy}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center px-3 py-2 text-sm font-medium border border-orange-500 text-orange-500 rounded-lg"
+                >
+                  Swiggy
+                </a>
+              </div>
             </nav>
           </div>
         )}
