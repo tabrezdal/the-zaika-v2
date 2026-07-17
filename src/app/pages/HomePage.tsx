@@ -302,7 +302,8 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Loyalty Program */}
+      {/* Loyalty Program -- hidden until the rewards program is actually live */}
+      {false && (
       <section className="py-16 bg-gradient-to-br from-orange-600 to-orange-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -332,8 +333,10 @@ export function HomePage() {
           </div>
         </div>
       </section>
+      )}
 
-      {/* Referral Program */}
+      {/* Referral Program -- hidden until the referral program is actually live */}
+      {false && (
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Share Great Food. Earn Great Rewards.</h2>
@@ -371,6 +374,7 @@ export function HomePage() {
           </Link>
         </div>
       </section>
+      )}
 
       {/* Delivery Areas */}
       <section className="py-16 bg-white">

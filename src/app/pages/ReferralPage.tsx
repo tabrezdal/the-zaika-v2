@@ -1,5 +1,6 @@
 import { Copy, Users, Award, TrendingUp, Check } from "lucide-react";
 import { useState } from "react";
+import { ComingSoonOverlay } from "../components/ComingSoonOverlay";
 
 export function ReferralPage() {
   const [copied, setCopied] = useState(false);
@@ -27,7 +28,8 @@ export function ReferralPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-4xl font-bold mb-2">Invite Friends, Get Rewarded</h1>
+        <ComingSoonOverlay label="Referral Program — Launching Soon">
+          <h1 className="text-4xl font-bold mb-2">Invite Friends, Get Rewarded</h1>
         <p className="text-gray-600 text-lg mb-8">Food tastes even better when shared. Invite your friends and earn rewards when they place their first order.</p>
 
         {/* Hero Card */}
@@ -140,6 +142,7 @@ export function ReferralPage() {
             ))}
           </div>
         </div>
+        </ComingSoonOverlay>
       </div>
     </div>
   );

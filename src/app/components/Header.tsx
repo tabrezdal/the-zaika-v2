@@ -50,12 +50,16 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <Link
-              to="/account"
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-            >
-              <User className="w-5 h-5 text-gray-600" />
-            </Link>
+            {/* Account icon hidden -- profile page isn't ready for real customers yet.
+                Flip false -> true once /account has real auth and real data. */}
+            {false && (
+              <Link
+                to="/account"
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <User className="w-5 h-5 text-gray-600" />
+              </Link>
+            )}
             <button
               onClick={() => setIsCartOpen(true)}
               className="relative p-2 hover:bg-gray-100 rounded-lg transition-colors"

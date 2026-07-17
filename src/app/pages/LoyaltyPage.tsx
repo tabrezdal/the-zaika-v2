@@ -1,4 +1,5 @@
 import { Star, Gift, Clock, TrendingUp } from "lucide-react";
+import { ComingSoonOverlay } from "../components/ComingSoonOverlay";
 
 export function LoyaltyPage() {
   const currentPoints = 450;
@@ -21,8 +22,9 @@ export function LoyaltyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-4xl font-bold mb-2">The Zaika Rewards</h1>
-        <p className="text-gray-600 text-lg mb-8">Enjoy exclusive benefits every time you order directly. Earn points, unlock rewards and receive member-only offers.</p>
+        <ComingSoonOverlay label="The Zaika Rewards — Launching Soon">
+          <h1 className="text-4xl font-bold mb-2">The Zaika Rewards</h1>
+          <p className="text-gray-600 text-lg mb-8">Enjoy exclusive benefits every time you order directly. Earn points, unlock rewards and receive member-only offers.</p>
 
         {/* Current Points Card */}
         <div className="bg-gradient-to-br from-orange-600 to-orange-700 text-white rounded-xl p-8 mb-8 shadow-lg">
@@ -131,6 +133,7 @@ export function LoyaltyPage() {
             </div>
           </div>
         </div>
+        </ComingSoonOverlay>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { User, Package, MapPin, Star, Gift, Settings, LogOut } from "lucide-react";
+import { ComingSoonOverlay } from "../components/ComingSoonOverlay";
 
 export function AccountPage() {
   const [activeTab, setActiveTab] = useState("profile");
@@ -57,9 +58,10 @@ export function AccountPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-4xl font-bold mb-8">My Account</h1>
+        <ComingSoonOverlay label="Account & Order History — Launching Soon">
+          <h1 className="text-4xl font-bold mb-8">My Account</h1>
 
-        <div className="grid lg:grid-cols-4 gap-8 items-start">
+          <div className="grid lg:grid-cols-4 gap-8 items-start">
           {/* Sidebar */}
           <aside className="lg:col-span-1">
             <div className="bg-white rounded-xl p-6 shadow-sm sticky top-24">
@@ -258,6 +260,7 @@ export function AccountPage() {
             )}
           </main>
         </div>
+        </ComingSoonOverlay>
       </div>
     </div>
   );

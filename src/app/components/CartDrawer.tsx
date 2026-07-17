@@ -113,10 +113,12 @@ export function CartDrawer() {
               </div>
             )}
 
-            {/* Points to Earn */}
+            {/* Points to Earn -- hidden until the loyalty program is live */}
+            {false && (
             <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-sm text-center">
               <span className="text-green-900">🎁 You&apos;ll earn <span className="font-bold">{pointsToEarn} points</span> on this order</span>
             </div>
+            )}
 
             {/* Order Summary */}
             <div className="space-y-2 text-sm">

@@ -1,5 +1,5 @@
 import { MenuItem } from "../data/menuData";
-import { CONTACT_INFO, calculateDeliveryFee, calculateLoyaltyPoints } from "../data/businessRules";
+import { CONTACT_INFO, calculateDeliveryFee } from "../data/businessRules";
 
 export interface OrderCartItem extends MenuItem {
   quantity: number;
@@ -22,7 +22,6 @@ export function buildWhatsAppOrderMessage(
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const deliveryFee = calculateDeliveryFee(subtotal);
   const total = subtotal + deliveryFee;
-  const pointsToEarn = calculateLoyaltyPoints(subtotal);
 
   const itemLines = cart
     .map((item, i) => `${i + 1}. ${item.name} x${item.quantity} — ₹${item.price * item.quantity}`)
@@ -49,7 +48,6 @@ export function buildWhatsAppOrderMessage(
     `*Total: ₹${total}*`,
     ``,
     `*Payment Preference:* ${customer.paymentPreference}`,
-    `(Loyalty points to earn: ${pointsToEarn} pts)`,
     ``,
     `_Sent from thezaika.com — please confirm to start preparing my order._`,
   ].join("\n");
