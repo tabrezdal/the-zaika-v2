@@ -47,7 +47,7 @@ export function MenuPage() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
           {/* Sidebar Categories & Filters */}
           <aside className="lg:w-64 flex-shrink-0">
             <div className="bg-white rounded-xl p-6 sticky top-32">
