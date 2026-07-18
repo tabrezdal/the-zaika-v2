@@ -23,7 +23,7 @@ export const menuItems: MenuItem[] = [
     description: "A delicious veg version of our classic akni with mixed vegetables cooked in fragrant rice and spices.",
     price: 145,
     category: "Akni",
-    image: resolveMenuImage("Veg_Akni.png"),
+    image: resolveMenuImage("Veg_Akni.webp"),
     isVeg: true,
   },
   {
@@ -32,7 +32,7 @@ export const menuItems: MenuItem[] = [
     description: "A delicious veg version of our classic akni with mixed vegetables cooked in fragrant rice and spices.",
     price: 245,
     category: "Akni",
-    image: resolveMenuImage("Veg_Akni.png"),
+    image: resolveMenuImage("Veg_Akni.webp"),
     isVeg: true,
   },
   {
@@ -41,7 +41,7 @@ export const menuItems: MenuItem[] = [
     description: "A flavorful mix of spices, rice and vegetables, inspired by the taste of Surat. A delightful regional specialty.",
     price: 160,
     category: "Akni",
-    image: resolveMenuImage("Surati_Veg_Akni.png"),
+    image: resolveMenuImage("Surati_Veg_Akni.webp"),
     isVeg: true,
   },
   {
@@ -50,7 +50,7 @@ export const menuItems: MenuItem[] = [
     description: "A flavorful mix of spices, rice and vegetables, inspired by the taste of Surat. A delightful regional specialty.",
     price: 260,
     category: "Akni",
-    image: resolveMenuImage("Surati_Veg_Akni.png"),
+    image: resolveMenuImage("Surati_Veg_Akni.webp"),
     isVeg: true,
   },
   {
@@ -59,7 +59,7 @@ export const menuItems: MenuItem[] = [
     description: "Immerse yourself in the comforting warmth of traditional chicken akni, where tender chicken pieces are simmered in a rich, aromatic broth, creating a soul soothing experience.",
     price: 179,
     category: "Akni",
-    image: resolveMenuImage("Chicken_Akni.png"),
+    image: resolveMenuImage("Chicken_Akni.webp"),
     isVeg: false,
   },
   {
@@ -68,7 +68,7 @@ export const menuItems: MenuItem[] = [
     description: "Immerse yourself in the comforting warmth of traditional chicken akni, where tender chicken pieces are simmered in a rich, aromatic broth, creating a soul soothing experience.",
     price: 279,
     category: "Akni",
-    image: resolveMenuImage("Chicken_Akni.png"),
+    image: resolveMenuImage("Chicken_Akni.webp"),
     isVeg: false,
     isBestseller: true,
   },
@@ -78,7 +78,7 @@ export const menuItems: MenuItem[] = [
     description: "Indulge in the succulent goodness of boneless chicken, slow cooked in a flavorful broth, resulting in a delectable combination of tender meat and aromatic spices.",
     price: 210,
     category: "Akni",
-    image: resolveMenuImage("Boneless_Chicken_Akni.png"),
+    image: resolveMenuImage("Boneless_Chicken_Akni.webp"),
     isVeg: false,
   },
   {
@@ -87,7 +87,7 @@ export const menuItems: MenuItem[] = [
     description: "Indulge in the succulent goodness of boneless chicken, slow cooked in a flavorful broth, resulting in a delectable combination of tender meat and aromatic spices.",
     price: 310,
     category: "Akni",
-    image: resolveMenuImage("Boneless_Chicken_Akni.png"),
+    image: resolveMenuImage("Boneless_Chicken_Akni.webp"),
     isVeg: false,
   },
   // ---- Rice & Biryani ----
@@ -97,7 +97,7 @@ export const menuItems: MenuItem[] = [
     description: "Savor the delightful medley of boiled eggs and fragrant rice infused with aromatic spices, offering a veg twist to the classic biryani experience.",
     price: 245,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Egg_Biryani.png"),
+    image: resolveMenuImage("Egg_Biryani.webp"),
     isVeg: false,
   },
   {
@@ -106,7 +106,7 @@ export const menuItems: MenuItem[] = [
     description: "Savor the delightful medley of boiled eggs and fragrant rice infused with aromatic spices, offering a veg twist to the classic biryani experience.",
     price: 145,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Egg_Biryani.png"),
+    image: resolveMenuImage("Egg_Biryani.webp"),
     isVeg: false,
   },
   {
@@ -115,7 +115,7 @@ export const menuItems: MenuItem[] = [
     description: "Indulge in the heavenly combination of fragrant basmati rice and tender, flavorful chicken cooked to perfection in traditional dum style, offering a delightful medley of spices and aromas.",
     price: 179,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Chicken_Biryani.png"),
+    image: resolveMenuImage("Chicken_Biryani.webp"),
     isVeg: false,
   },
   {
@@ -124,7 +124,7 @@ export const menuItems: MenuItem[] = [
     description: "Indulge in the heavenly combination of fragrant basmati rice and tender, flavorful chicken cooked to perfection in traditional dum style, offering a delightful medley of spices and aromas.",
     price: 279,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Chicken_Biryani.png"),
+    image: resolveMenuImage("Chicken_Biryani.webp"),
     isVeg: false,
     isBestseller: true,
   },
@@ -134,7 +134,7 @@ export const menuItems: MenuItem[] = [
     description: "Experience the ultimate feast with succulent boneless chicken cooked with aromatic spices, layered with fragrant rice, and garnished to perfection, creating a hassle free indulgence.",
     price: 210,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Boneless_Chicken_Biryani.png"),
+    image: resolveMenuImage("Boneless_Chicken_Biryani.webp"),
     isVeg: false,
   },
   {
@@ -143,7 +143,7 @@ export const menuItems: MenuItem[] = [
     description: "Experience the ultimate feast with succulent boneless chicken cooked with aromatic spices, layered with fragrant rice, and garnished to perfection, creating a hassle free indulgence.",
     price: 310,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Boneless_Chicken_Biryani.png"),
+    image: resolveMenuImage("Boneless_Chicken_Biryani.webp"),
     isVeg: false,
   },
   {
@@ -152,7 +152,7 @@ export const menuItems: MenuItem[] = [
     description: "Delight your taste buds with the irresistible fusion of smoky chicken tikka and aromatic basmati rice, creating a harmonious blend of flavors that will leave you craving more.",
     price: 239,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Chicken_Tikka_Biryani.png"),
+    image: resolveMenuImage("Chicken_Tikka_Biryani.webp"),
     isVeg: false,
   },
   {
@@ -161,7 +161,7 @@ export const menuItems: MenuItem[] = [
     description: "Delight your taste buds with the irresistible fusion of smoky chicken tikka and aromatic basmati rice, creating a harmonious blend of flavors that will leave you craving more.",
     price: 339,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Chicken_Tikka_Biryani.png"),
+    image: resolveMenuImage("Chicken_Tikka_Biryani.webp"),
     isVeg: false,
   },
   {
@@ -170,7 +170,7 @@ export const menuItems: MenuItem[] = [
     description: "Spicy fried rice and vegetables, tossed in a bold schezwan sauce for an extra kick that spice lovers will enjoy.",
     price: 250,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Schezwan_Fried_Rice.png"),
+    image: resolveMenuImage("Schezwan_Fried_Rice.webp"),
     isVeg: true,
   },
   {
@@ -179,7 +179,7 @@ export const menuItems: MenuItem[] = [
     description: "Stir fried rice with scrambled eggs, mixed vegetables and a touch of soy sauce for a simple yet satisfying dish.",
     price: 250,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Egg_Fried_Rice.png"),
+    image: resolveMenuImage("Egg_Fried_Rice.webp"),
     isVeg: false,
   },
   {
@@ -188,7 +188,7 @@ export const menuItems: MenuItem[] = [
     description: "Flavorful stir fried rice with tender chicken pieces, fresh vegetables and a hint of soy sauce. Perfect for a quick meal.",
     price: 250,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Chicken_Fried_Rice.png"),
+    image: resolveMenuImage("Chicken_Fried_Rice.webp"),
     isVeg: false,
   },
   {
@@ -197,7 +197,7 @@ export const menuItems: MenuItem[] = [
     description: "Spicy fried rice with chicken and vegetables, tossed in a bold schezwan sauce for an extra kick that spice lovers will enjoy.",
     price: 250,
     category: "Rice & Biryani",
-    image: resolveMenuImage("Schezwan_Chicken_Fried_Rice.png"),
+    image: resolveMenuImage("Schezwan_Chicken_Fried_Rice.webp"),
     isVeg: false,
   },
   // ---- Chicken Starters ----
@@ -207,7 +207,7 @@ export const menuItems: MenuItem[] = [
     description: "Tender chicken pieces marinated in a harmonious blend of yogurt and spices, then grilled to perfection, offering a spicy and smoky flavor.",
     price: 250,
     category: "Chicken Starters",
-    image: resolveMenuImage("Chicken_Tikka_6_Pieces.png"),
+    image: resolveMenuImage("Chicken_Tikka_6_Pieces.webp"),
     isVeg: false,
   },
   {
@@ -216,7 +216,7 @@ export const menuItems: MenuItem[] = [
     description: "Tender chicken pieces marinated in a blend of yogurt, green herbs and spices, then grilled to perfection, offering a fresh and vibrant twist on a classic favorite.",
     price: 250,
     category: "Chicken Starters",
-    image: resolveMenuImage("Green_Chicken_Tikka.png"),
+    image: resolveMenuImage("Green_Chicken_Tikka.webp"),
     isVeg: false,
   },
   {
@@ -225,7 +225,7 @@ export const menuItems: MenuItem[] = [
     description: "Juicy chicken pieces marinated in a creamy blend of yogurt and spices, then grilled to perfection, resulting in a symphony of rich and mild flavors.",
     price: 250,
     category: "Chicken Starters",
-    image: resolveMenuImage("Malai_Chicken_Tikka.png"),
+    image: resolveMenuImage("Malai_Chicken_Tikka.webp"),
     isVeg: false,
   },
   {
@@ -234,7 +234,7 @@ export const menuItems: MenuItem[] = [
     description: "Experience the soul warming essence of our chicken tandoori, where succulent chicken meets the traditional touch of the tandoor, creating a masterpiece of smoky aroma and charred perfection.",
     price: 200,
     category: "Chicken Starters",
-    image: resolveMenuImage("Chicken_Tandoori_Leg_Piece_Half.png"),
+    image: resolveMenuImage("Chicken_Tandoori_Leg_Piece_Half.webp"),
     isVeg: false,
   },
   {
@@ -243,7 +243,7 @@ export const menuItems: MenuItem[] = [
     description: "Experience the soul warming essence of our chicken tandoori, where succulent chicken meets the traditional touch of the tandoor, creating a masterpiece of smoky aroma and charred perfection.",
     price: 350,
     category: "Chicken Starters",
-    image: resolveMenuImage("Chicken_Tandoori_Leg_Piece_Full.png"),
+    image: resolveMenuImage("Chicken_Tandoori_Leg_Piece_Full.webp"),
     isVeg: false,
   },
   {
@@ -252,7 +252,7 @@ export const menuItems: MenuItem[] = [
     description: "Tender chicken pieces marinated in a rich, creamy blend of spices and yogurt, then grilled to smoky perfection. A deliciously indulgent take on a classic.",
     price: 250,
     category: "Chicken Starters",
-    image: resolveMenuImage("Creamy_Chicken_Tandoori_Leg_Piece.png"),
+    image: resolveMenuImage("Creamy_Chicken_Tandoori_Leg_Piece.webp"),
     isVeg: false,
   },
   {
@@ -261,7 +261,7 @@ export const menuItems: MenuItem[] = [
     description: "Deliciously spiced chicken drumettes, battered and fried until crispy. Perfect as a starter or snack.",
     price: 300,
     category: "Chicken Starters",
-    image: resolveMenuImage("Chicken_Lollipop_6_Pieces.png"),
+    image: resolveMenuImage("Chicken_Lollipop_6_Pieces.webp"),
     isVeg: false,
   },
   {
@@ -270,7 +270,7 @@ export const menuItems: MenuItem[] = [
     description: "Juicy chicken legs marinated in spices and grilled to perfection, offering a delightful burst of flavors.",
     price: 250,
     category: "Chicken Starters",
-    image: resolveMenuImage("Tangdi_Kabab.png"),
+    image: resolveMenuImage("Tangdi_Kabab.webp"),
     isVeg: true,
   },
   // ---- Pizzas ----
@@ -280,7 +280,7 @@ export const menuItems: MenuItem[] = [
     description: "Golden thin crust with tangy tomato sauce, crowned with sweet juicy corn kernels and stretchy mozzarella — baked till bubbly and golden. Simple, fresh and irresistible.",
     price: 249,
     category: "Pizzas",
-    image: resolveMenuImage("Sweet Corn Pizza.png"),
+    image: resolveMenuImage("Sweet Corn Pizza.webp"),
     isVeg: true,
   },
   {
@@ -289,7 +289,7 @@ export const menuItems: MenuItem[] = [
     description: "Golden thin crust with tangy tomato sauce, crowned with sweet juicy corn kernels and stretchy mozzarella — baked till bubbly and golden. Simple, fresh and irresistible.",
     price: 319,
     category: "Pizzas",
-    image: resolveMenuImage("Sweet Corn Pizza.png"),
+    image: resolveMenuImage("Sweet Corn Pizza.webp"),
     isVeg: true,
   },
   {
@@ -298,7 +298,7 @@ export const menuItems: MenuItem[] = [
     description: "Golden thin crust with tangy tomato sauce, crowned with sweet juicy corn kernels and stretchy mozzarella — baked till bubbly and golden. Simple, fresh and irresistible.",
     price: 499,
     category: "Pizzas",
-    image: resolveMenuImage("Sweet Corn Pizza.png"),
+    image: resolveMenuImage("Sweet Corn Pizza.webp"),
     isVeg: true,
   },
   {
@@ -334,7 +334,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy golden crust with rich tomato sauce, layered with fresh tomato slices, fragrant Italian herbs and melted mozzarella. Light, tangy and classic — in the very best way.",
     price: 99,
     category: "Pizzas",
-    image: resolveMenuImage("Tomato Pizza.png"),
+    image: resolveMenuImage("Tomato Pizza.webp"),
     isVeg: true,
   },
   {
@@ -343,7 +343,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy golden crust with rich tomato sauce, layered with fresh tomato slices, fragrant Italian herbs and melted mozzarella. Light, tangy and classic — in the very best way.",
     price: 159,
     category: "Pizzas",
-    image: resolveMenuImage("Tomato Pizza.png"),
+    image: resolveMenuImage("Tomato Pizza.webp"),
     isVeg: true,
   },
   {
@@ -352,7 +352,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy golden crust with rich tomato sauce, layered with fresh tomato slices, fragrant Italian herbs and melted mozzarella. Light, tangy and classic — in the very best way.",
     price: 219,
     category: "Pizzas",
-    image: resolveMenuImage("Tomato Pizza.png"),
+    image: resolveMenuImage("Tomato Pizza.webp"),
     isVeg: true,
   },
   {
@@ -361,7 +361,7 @@ export const menuItems: MenuItem[] = [
     description: "Vibrant green, red and yellow capsicum — fresh and crunchy — loaded over tomato sauce and blanketed in stretchy mozzarella on a crispy baked crust. Colourful, bold, freshly made.",
     price: 109,
     category: "Pizzas",
-    image: resolveMenuImage("Capsicum Pizza.png"),
+    image: resolveMenuImage("Capsicum Pizza.webp"),
     isVeg: true,
   },
   {
@@ -370,7 +370,7 @@ export const menuItems: MenuItem[] = [
     description: "Vibrant green, red and yellow capsicum — fresh and crunchy — loaded over tomato sauce and blanketed in stretchy mozzarella on a crispy baked crust. Colourful, bold, freshly made.",
     price: 169,
     category: "Pizzas",
-    image: resolveMenuImage("Capsicum Pizza.png"),
+    image: resolveMenuImage("Capsicum Pizza.webp"),
     isVeg: true,
   },
   {
@@ -379,7 +379,7 @@ export const menuItems: MenuItem[] = [
     description: "Vibrant green, red and yellow capsicum — fresh and crunchy — loaded over tomato sauce and blanketed in stretchy mozzarella on a crispy baked crust. Colourful, bold, freshly made.",
     price: 229,
     category: "Pizzas",
-    image: resolveMenuImage("Capsicum Pizza.png"),
+    image: resolveMenuImage("Capsicum Pizza.webp"),
     isVeg: true,
   },
   {
@@ -388,7 +388,7 @@ export const menuItems: MenuItem[] = [
     description: "The Italian original, perfected. Crispy golden crust, slow cooked tomato base, generous stretchy Mozzarella and fresh basil every ingredient matters, every slice is a classic.",
     price: 169,
     category: "Pizzas",
-    image: resolveMenuImage("Margherita Pizza.png"),
+    image: resolveMenuImage("Margherita Pizza.webp"),
     isVeg: true,
   },
   {
@@ -397,7 +397,7 @@ export const menuItems: MenuItem[] = [
     description: "The Italian original, perfected. Crispy golden crust, slow cooked tomato base, generous stretchy Mozzarella and fresh basil every ingredient matters, every slice is a classic.",
     price: 319,
     category: "Pizzas",
-    image: resolveMenuImage("Margherita Pizza.png"),
+    image: resolveMenuImage("Margherita Pizza.webp"),
     isVeg: true,
     isBestseller: true,
   },
@@ -407,7 +407,7 @@ export const menuItems: MenuItem[] = [
     description: "The Italian original, perfected. Crispy golden crust, slow cooked tomato base, generous stretchy Mozzarella and fresh basil every ingredient matters, every slice is a classic.",
     price: 499,
     category: "Pizzas",
-    image: resolveMenuImage("Margherita Pizza.png"),
+    image: resolveMenuImage("Margherita Pizza.webp"),
     isVeg: true,
   },
   {
@@ -416,7 +416,7 @@ export const menuItems: MenuItem[] = [
     description: "Indian comfort meets Italian craft — paneer in velvety makhni sauce, topped with capsicum, onion, cream drizzle and mozzarella on a crispy crust. Bold, rich and unmistakably Zaika.",
     price: 319,
     category: "Pizzas",
-    image: resolveMenuImage("Paneer Makhni Pizza (Capsicum & Onion).png"),
+    image: resolveMenuImage("Paneer Makhni Pizza (Capsicum & Onion).webp"),
     isVeg: true,
   },
   {
@@ -425,7 +425,7 @@ export const menuItems: MenuItem[] = [
     description: "Indian comfort meets Italian craft — paneer in velvety makhni sauce, topped with capsicum, onion, cream drizzle and mozzarella on a crispy crust. Bold, rich and unmistakably Zaika.",
     price: 499,
     category: "Pizzas",
-    image: resolveMenuImage("Paneer Makhni Pizza (Capsicum & Onion).png"),
+    image: resolveMenuImage("Paneer Makhni Pizza (Capsicum & Onion).webp"),
     isVeg: true,
   },
   {
@@ -434,7 +434,7 @@ export const menuItems: MenuItem[] = [
     description: "Indian comfort meets Italian craft — paneer in velvety makhni sauce, topped with capsicum, onion, cream drizzle and mozzarella on a crispy crust. Bold, rich and unmistakably Zaika.",
     price: 699,
     category: "Pizzas",
-    image: resolveMenuImage("Paneer Makhni Pizza (Capsicum & Onion).png"),
+    image: resolveMenuImage("Paneer Makhni Pizza (Capsicum & Onion).webp"),
     isVeg: true,
   },
   {
@@ -443,7 +443,7 @@ export const menuItems: MenuItem[] = [
     description: "Tandoori-marinated paneer with smoky char marks, loaded over a golden crust with capsicum, red onion and mozzarella, finished with a mint drizzle. Where the tandoor meets Italy.",
     price: 129,
     category: "Pizzas",
-    image: resolveMenuImage("Paneer Tandoori Pizza.png"),
+    image: resolveMenuImage("Paneer Tandoori Pizza.webp"),
     isVeg: true,
   },
   {
@@ -452,7 +452,7 @@ export const menuItems: MenuItem[] = [
     description: "Tandoori-marinated paneer with smoky char marks, loaded over a golden crust with capsicum, red onion and mozzarella, finished with a mint drizzle. Where the tandoor meets Italy.",
     price: 189,
     category: "Pizzas",
-    image: resolveMenuImage("Paneer Tandoori Pizza.png"),
+    image: resolveMenuImage("Paneer Tandoori Pizza.webp"),
     isVeg: true,
   },
   {
@@ -461,7 +461,7 @@ export const menuItems: MenuItem[] = [
     description: "Tandoori-marinated paneer with smoky char marks, loaded over a golden crust with capsicum, red onion and mozzarella, finished with a mint drizzle. Where the tandoor meets Italy.",
     price: 249,
     category: "Pizzas",
-    image: resolveMenuImage("Paneer Tandoori Pizza.png"),
+    image: resolveMenuImage("Paneer Tandoori Pizza.webp"),
     isVeg: true,
   },
   {
@@ -470,7 +470,7 @@ export const menuItems: MenuItem[] = [
     description: "Soft hand tossed pizza loaded with smoky chicken tikka, Mozzarella cheese, onion, capsicum and special pizza sauce.",
     price: 249,
     category: "Pizzas",
-    image: resolveMenuImage("Chicken_Tikka_Pizza.png"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Chicken_Tikka_Pizza.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
     isVeg: false,
   },
   // ---- Burgers ----
@@ -480,7 +480,7 @@ export const menuItems: MenuItem[] = [
     description: "A thick, golden crisp spiced potato patty, made fresh daily  nestled with iceberg lettuce, ripe tomato, onion and our house chutney in a soft toasted bun. Desi soul in every bite.",
     price: 119,
     category: "Burgers",
-    image: resolveMenuImage("Veg Aloo Tikki Burger.png"),
+    image: resolveMenuImage("Veg Aloo Tikki Burger.webp"),
     isVeg: true,
   },
   {
@@ -489,7 +489,7 @@ export const menuItems: MenuItem[] = [
     description: "Our aloo tikki burger elevated. Crispy spiced patty draped in generous melted cheese with a gooey pull, fresh veggies and house chutney inside a soft toasted bun. Pure indulgence.",
     price: 139,
     category: "Burgers",
-    image: resolveMenuImage("Cheese Aloo Tikki Burger.png"),
+    image: resolveMenuImage("Cheese Aloo Tikki Burger.webp"),
     isVeg: true,
   },
   {
@@ -498,7 +498,7 @@ export const menuItems: MenuItem[] = [
     description: "A thick grilled paneer patty, spice-seasoned with golden char marks, layered with crisp lettuce, fresh tomato and creamy herb sauce in a toasted bun. Wholesome and protein-packed.",
     price: 139,
     category: "Burgers",
-    image: resolveMenuImage("Paneer Burger.png"),
+    image: resolveMenuImage("Paneer Burger.webp"),
     isVeg: true,
   },
   {
@@ -507,7 +507,7 @@ export const menuItems: MenuItem[] = [
     description: "Grilled spiced paneer crowned with generous melted cheese, crisp lettuce, fresh tomato and signature house sauce inside a toasted bun. Rich, creamy and deeply satisfying.",
     price: 159,
     category: "Burgers",
-    image: resolveMenuImage("Cheese Paneer Burger.png"),
+    image: resolveMenuImage("Cheese Paneer Burger.webp"),
     isVeg: true,
     isBestseller: true,
   },
@@ -517,7 +517,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy chicken tikki layered with fresh lettuce, creamy mayo, and signature burger sauce inside a soft toasted bun.",
     price: 129,
     category: "Burgers",
-    image: resolveMenuImage("Chicken_Burger.png"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Chicken_Burger.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
     isVeg: false,
   },
   {
@@ -526,7 +526,7 @@ export const menuItems: MenuItem[] = [
     description: "Juicy crispy chicken patty topped with melted cheese, lettuce, mayo, and signature sauce served in a toasted sesame bun.",
     price: 149,
     category: "Burgers",
-    image: resolveMenuImage("Cheese_Chicken_Burger.png"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Cheese_Chicken_Burger.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
     isVeg: false,
   },
   {
@@ -535,7 +535,7 @@ export const menuItems: MenuItem[] = [
     description: "Extra crispy fried chicken fillet with fresh lettuce and creamy mayo inside a soft toasted bun. Perfect for lovers of crunchy chicken burgers.",
     price: 149,
     category: "Burgers",
-    image: resolveMenuImage("Zinger_Chicken_Burger.png"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Zinger_Chicken_Burger.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
     isVeg: false,
   },
   {
@@ -544,7 +544,7 @@ export const menuItems: MenuItem[] = [
     description: "Crunchy chicken fillet coated with smoky tandoori seasoning, layered with fresh lettuce and creamy mayo in a toasted bun.",
     price: 169,
     category: "Burgers",
-    image: resolveMenuImage("Tandoori_Zinger_Chicken_Burger.png"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Tandoori_Zinger_Chicken_Burger.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
     isVeg: false,
   },
   // ---- Sandwiches ----
@@ -554,7 +554,7 @@ export const menuItems: MenuItem[] = [
     description: "Crisp layers of fresh tomato, onion, cucumber and cabbage with a classic chutney spread between golden toasted bread. Simple, clean and satisfying the sandwich that never disappoints.",
     price: 129,
     category: "Sandwiches",
-    image: resolveMenuImage("Veg Grilled Sandwich.png"),
+    image: resolveMenuImage("Veg Grilled Sandwich.webp"),
     isVeg: true,
   },
   {
@@ -563,7 +563,7 @@ export const menuItems: MenuItem[] = [
     description: "Colourful fresh vegetables layered between bread and pressed on a hot grill until golden deep grill ridges outside, warm and tender within. The heat does something beautiful to every layer.",
     price: 169,
     category: "Sandwiches",
-    image: resolveMenuImage("Veg Sandwich.png"),
+    image: resolveMenuImage("Veg Sandwich.webp"),
     isVeg: true,
   },
   {
@@ -572,7 +572,7 @@ export const menuItems: MenuItem[] = [
     description: "Warm spiced mashed potato and green peas seasoned with chaat masala and fresh herbs  generously filled between golden toasted bread. Hearty, familiar and utterly comforting.",
     price: 149,
     category: "Sandwiches",
-    image: resolveMenuImage("Aloo Matar Sandwich.png"),
+    image: resolveMenuImage("Aloo Matar Sandwich.webp"),
     isVeg: true,
   },
   {
@@ -581,7 +581,7 @@ export const menuItems: MenuItem[] = [
     description: "Spiced potato pea filling layered with generous melted cheese between golden toasted bread crispy outside, warm and gooey within. Comfort food elevated to its very best.",
     price: 99,
     category: "Sandwiches",
-    image: resolveMenuImage("Cheese Aloo Matar Sandwich.png"),
+    image: resolveMenuImage("Cheese Aloo Matar Sandwich.webp"),
     isVeg: true,
   },
   {
@@ -590,7 +590,7 @@ export const menuItems: MenuItem[] = [
     description: "Punchy, vibrant and bold golden toasted bread spread generously with our house green chilli chutney, layered with crisp fresh veggies. Every bite is a flavour wake up call.",
     price: 79,
     category: "Sandwiches",
-    image: resolveMenuImage("Chilli Chatni Sandwich.png"),
+    image: resolveMenuImage("Chilli Chatni Sandwich.webp"),
     isVeg: true,
   },
   {
@@ -599,7 +599,7 @@ export const menuItems: MenuItem[] = [
     description: "The heat of our house chilli chutney meets the richness of melted cheese between golden toasted bread. Bold, creamy and completely addictive a true Zaika signature.",
     price: 99,
     category: "Sandwiches",
-    image: resolveMenuImage("Cheese Chilli Chatni Sandwich.png"),
+    image: resolveMenuImage("Cheese Chilli Chatni Sandwich.webp"),
     isVeg: true,
   },
   {
@@ -608,7 +608,7 @@ export const menuItems: MenuItem[] = [
     description: "Thick spiced paneer cubes with fresh tomato, capsicum and a creamy herb spread, toasted between golden bread. Protein packed, freshly made and full of flavour in every bite.",
     price: 99,
     category: "Sandwiches",
-    image: resolveMenuImage("Paneer Sandwich.png"),
+    image: resolveMenuImage("Paneer Sandwich.webp"),
     isVeg: true,
   },
   // ---- Gathiya ----
@@ -673,7 +673,7 @@ export const menuItems: MenuItem[] = [
     description: "Freshly baked bread brushed with real garlic butter and aromatic herbs, toasted to a golden crisp — warm, fragrant and impossible to stop at one piece. Best straight from the oven.",
     price: 79,
     category: "Sides & Snacks",
-    image: resolveMenuImage("Garlic Bread.png"),
+    image: resolveMenuImage("Garlic Bread.webp"),
     isVeg: true,
   },
   {
@@ -682,7 +682,7 @@ export const menuItems: MenuItem[] = [
     description: "Golden herb-buttered bread crowned with bubbled mozzarella — browned at the edges, one slice showing a glorious cheese pull. Crisp outside, gloriously cheesy within. Always a crowd-pleaser.",
     price: 99,
     category: "Sides & Snacks",
-    image: resolveMenuImage("Cheese Garlic Bread.png"),
+    image: resolveMenuImage("Cheese Garlic Bread.webp"),
     isVeg: true,
   },
   {
@@ -691,7 +691,7 @@ export const menuItems: MenuItem[] = [
     description: "Long, crispy golden fries seasoned with fine sea salt — the perfect classic that pairs with everything on the menu. Hot, fresh and satisfying every single time.",
     price: 160,
     category: "Sides & Snacks",
-    image: resolveMenuImage("Salted French Fries.png"),
+    image: resolveMenuImage("Salted French Fries.webp"),
     isVeg: true,
   },
   {
@@ -700,7 +700,7 @@ export const menuItems: MenuItem[] = [
     description: "Golden crispy fries tossed in a vibrant Indian spice blend — chaat masala, red chilli and fresh coriander — for a bold, tangy kick that turns a simple snack into an experience.",
     price: 195,
     category: "Sides & Snacks",
-    image: resolveMenuImage("Masala French Fries.png"),
+    image: resolveMenuImage("Masala French Fries.webp"),
     isVeg: true,
   },
   {
@@ -709,7 +709,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy fries evenly coated in fiery peri peri seasoning — smoky, bold and beautifully spiced. Finished with a lemon squeeze and a creamy peri mayo on the side. One order is never enough.",
     price: 210,
     category: "Sides & Snacks",
-    image: resolveMenuImage("Peri Peri French Fries.png"),
+    image: resolveMenuImage("Peri Peri French Fries.webp"),
     isVeg: true,
   },
   {
@@ -718,7 +718,7 @@ export const menuItems: MenuItem[] = [
     description: "The original comfort in a bowl — classic Maggi noodles cooked fresh to order, steaming hot with iconic seasoning. Add veggies or cheese to make it your own perfect version.",
     price: 69,
     category: "Sides & Snacks",
-    image: resolveMenuImage("Plain Maggy.jpg"),
+    image: resolveMenuImage("Plain Maggy.webp"),
     isVeg: true,
   },
   {
@@ -727,7 +727,7 @@ export const menuItems: MenuItem[] = [
     description: "Your Maggi, but bolder twice the masala, richer colour and a depth of spice that lingers long after the last bite. Steaming hot and fiercely satisfying. Once you go double, you never go back.",
     price: 79,
     category: "Sides & Snacks",
-    image: resolveMenuImage("Double Masala Maggi.png"),
+    image: resolveMenuImage("Double Masala Maggi.webp"),
     isVeg: true,
   },
   // ---- Papad ----
@@ -737,7 +737,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy and light, this roasted papad is a perfect accompaniment to any meal, adding a crunchy texture.",
     price: 20,
     category: "Papad",
-    image: resolveMenuImage("Roasted_Papad.png"),
+    image: resolveMenuImage("Roasted_Papad.webp"),
     isVeg: true,
   },
   {
@@ -746,7 +746,7 @@ export const menuItems: MenuItem[] = [
     description: "Deep-fried to golden perfection, these papads are crispy and delicious, ideal for snacking.",
     price: 30,
     category: "Papad",
-    image: resolveMenuImage("Fried_Papad.png"),
+    image: resolveMenuImage("Fried_Papad.webp"),
     isVeg: true,
   },
   {
@@ -755,7 +755,7 @@ export const menuItems: MenuItem[] = [
     description: "Roasted papad topped with a tangy mix of onions, tomatoes and spices. A flavorful starter or side dish.",
     price: 40,
     category: "Papad",
-    image: resolveMenuImage("Masala_Papad.png"),
+    image: resolveMenuImage("Masala_Papad.webp"),
     isVeg: true,
   },
   // ---- Beverages ----
@@ -765,7 +765,7 @@ export const menuItems: MenuItem[] = [
     description: "Freshly brewed espresso blended smooth with chilled milk over ice, topped with a generous swirl of whipped cream. Rich, creamy and deeply satisfying — your perfect pick-me-up.",
     price: 129,
     category: "Beverages",
-    image: resolveMenuImage("Cold Coffee.png"),
+    image: resolveMenuImage("Cold Coffee.webp"),
     isVeg: true,
   },
   {
@@ -774,7 +774,7 @@ export const menuItems: MenuItem[] = [
     description: "Deep, velvety hot chocolate made with premium cocoa silky smooth, gently sweet and intensely warming. Finished with a cocoa dusting and cinnamon stick. Savour every sip slowly.",
     price: 79,
     category: "Beverages",
-    image: resolveMenuImage("Hot Chocolate.png"),
+    image: resolveMenuImage("Hot Chocolate.webp"),
     isVeg: true,
   },
   {
@@ -783,7 +783,7 @@ export const menuItems: MenuItem[] = [
     description: "A warm, malty mug of Bournvita chocolatey, smooth and perfectly sweet served piping hot with a dusting of malt powder on top. The classic evening cup, done exactly right.",
     price: 69,
     category: "Beverages",
-    image: resolveMenuImage("Hot Bournvita.png"),
+    image: resolveMenuImage("Hot Bournvita.webp"),
     isVeg: true,
   },
   {
@@ -792,7 +792,7 @@ export const menuItems: MenuItem[] = [
     description: "Creamy milkshake blended with crushed KitKat, topped with whipped cream, chocolate drizzle and KitKat fingers as garnish. Rich, indulgent and impossible to stop sipping.",
     price: 119,
     category: "Beverages",
-    image: resolveMenuImage("KitKat Milkshake.png"),
+    image: resolveMenuImage("KitKat Milkshake.webp"),
     isVeg: true,
   },
   {
@@ -801,7 +801,7 @@ export const menuItems: MenuItem[] = [
     description: "A thick, vibrant milkshake bursting with blueberry flavour, blended smooth with creamy milk and crowned with whipped cream and fresh blueberries. Indulgent, fruity and beautiful.",
     price: 109,
     category: "Beverages",
-    image: resolveMenuImage("Blueberry Milkshakee.png"),
+    image: resolveMenuImage("Blueberry Milkshakee.webp"),
     isVeg: true,
   },
   {
@@ -810,7 +810,7 @@ export const menuItems: MenuItem[] = [
     description: "Thick, creamy milkshake blended with Oreo cookies, topped with whipped cream, chocolate drizzle and a whole Oreo as garnish. The dessert in a glass experience.",
     price: 119,
     category: "Beverages",
-    image: resolveMenuImage("Oreo Milkshake.png"),
+    image: resolveMenuImage("Oreo Milkshake.webp"),
     isVeg: true,
   },
   // ---- Desserts ----
@@ -820,7 +820,7 @@ export const menuItems: MenuItem[] = [
     description: "Soft milk-solid dumplings soaked in warm rose-flavoured sugar syrup.",
     price: 30,
     category: "Desserts",
-    image: resolveMenuImage("Gulab_Jamun_2_Pieces.png"),
+    image: resolveMenuImage("Gulab_Jamun_2_Pieces.webp"),
     isVeg: true,
   },
   {
@@ -829,7 +829,7 @@ export const menuItems: MenuItem[] = [
     description: "A classic coconut sweet, rolled fresh and lightly sweetened.",
     price: 20,
     category: "Desserts",
-    image: resolveMenuImage("Coconut_Laddu_1_Piece.png"),
+    image: resolveMenuImage("Coconut_Laddu_1_Piece.webp"),
     isVeg: true,
   },
 ];
