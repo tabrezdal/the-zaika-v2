@@ -470,7 +470,7 @@ export const menuItems: MenuItem[] = [
     description: "Soft hand tossed pizza loaded with smoky chicken tikka, Mozzarella cheese, onion, capsicum and special pizza sauce.",
     price: 249,
     category: "Pizzas",
-    image: resolveMenuImage("Chicken_Tikka_Pizza.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Chicken_Tikka_Pizza.webp"),
     isVeg: false,
   },
   // ---- Burgers ----
@@ -517,7 +517,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy chicken tikki layered with fresh lettuce, creamy mayo, and signature burger sauce inside a soft toasted bun.",
     price: 129,
     category: "Burgers",
-    image: resolveMenuImage("Chicken_Burger.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Chicken_Burger.webp"),
     isVeg: false,
   },
   {
@@ -526,7 +526,7 @@ export const menuItems: MenuItem[] = [
     description: "Juicy crispy chicken patty topped with melted cheese, lettuce, mayo, and signature sauce served in a toasted sesame bun.",
     price: 149,
     category: "Burgers",
-    image: resolveMenuImage("Cheese_Chicken_Burger.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Cheese_Chicken_Burger.webp"),
     isVeg: false,
   },
   {
@@ -535,7 +535,7 @@ export const menuItems: MenuItem[] = [
     description: "Extra crispy fried chicken fillet with fresh lettuce and creamy mayo inside a soft toasted bun. Perfect for lovers of crunchy chicken burgers.",
     price: 149,
     category: "Burgers",
-    image: resolveMenuImage("Zinger_Chicken_Burger.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Zinger_Chicken_Burger.webp"),
     isVeg: false,
   },
   {
@@ -544,7 +544,7 @@ export const menuItems: MenuItem[] = [
     description: "Crunchy chicken fillet coated with smoky tandoori seasoning, layered with fresh lettuce and creamy mayo in a toasted bun.",
     price: 169,
     category: "Burgers",
-    image: resolveMenuImage("Tandoori_Zinger_Chicken_Burger.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Tandoori_Zinger_Chicken_Burger.webp"),
     isVeg: false,
   },
   // ---- Sandwiches ----
@@ -618,7 +618,7 @@ export const menuItems: MenuItem[] = [
     description: "Soft, yet crisp Gujarati snack made from gram flour, seasoned with mild spices and fried to perfection. With its distinct texture and delicate flavor, vanela gathiya is an ideal tea time snack or festive treat. Please note gathiya is served without accompaniments. Kindly select your preferred chutneys, kadhi, papaya sambharo and more from the add on section.",
     price: 450,
     category: "Gathiya",
-    image: resolveMenuImage("Vanela_Gathiya.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Vanela_Gathiya.webp"),
     isVeg: true,
   },
   {
@@ -627,7 +627,7 @@ export const menuItems: MenuItem[] = [
     description: "Soft, yet crisp Gujarati snack made from gram flour, seasoned with mild spices and fried to perfection. With its distinct texture and delicate flavor, vanela gathiya is an ideal tea time snack or festive treat. Please note gathiya is served without accompaniments. Kindly select your preferred chutneys, kadhi, papaya sambharo and more from the add on section.",
     price: 850,
     category: "Gathiya",
-    image: resolveMenuImage("Vanela_Gathiya.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Vanela_Gathiya.webp"),
     isVeg: true,
   },
   {
@@ -636,7 +636,7 @@ export const menuItems: MenuItem[] = [
     description: "Soft, yet crisp Gujarati snack made from gram flour, seasoned with mild spices and fried to perfection. With its distinct texture and delicate flavor, vanela gathiya is an ideal tea time snack or festive treat. Please note gathiya is served without accompaniments. Kindly select your preferred chutneys, kadhi, papaya sambharo and more from the add on section.",
     price: 250,
     category: "Gathiya",
-    image: resolveMenuImage("Vanela_Gathiya.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Vanela_Gathiya.webp"),
     isVeg: true,
   },
   {
@@ -645,7 +645,7 @@ export const menuItems: MenuItem[] = [
     description: "A crispy and savory kathiyawadi snack made from gram flour and spices, deep fried to golden perfection. This crunchy delight is best enjoyed with add on, offering a classic street food experience full of flavor and tradition. Please note gathiya is served without accompaniments. Kindly select your preferred chutneys, kadhi, papaya sambharo and more from the add on section.",
     price: 250,
     category: "Gathiya",
-    image: resolveMenuImage("Fafda_Gathiya.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Fafda_Gathiya.webp"),
     isVeg: true,
   },
   {
@@ -654,7 +654,7 @@ export const menuItems: MenuItem[] = [
     description: "A crispy and savory kathiyawadi snack made from gram flour and spices, deep fried to golden perfection. This crunchy delight is best enjoyed with add on, offering a classic street food experience full of flavor and tradition. Please note gathiya is served without accompaniments. Kindly select your preferred chutneys, kadhi, papaya sambharo and more from the add on section.",
     price: 450,
     category: "Gathiya",
-    image: resolveMenuImage("Fafda_Gathiya.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Fafda_Gathiya.webp"),
     isVeg: true,
   },
   {
@@ -663,7 +663,7 @@ export const menuItems: MenuItem[] = [
     description: "A crispy and savory kathiyawadi snack made from gram flour and spices, deep fried to golden perfection. This crunchy delight is best enjoyed with add on, offering a classic street food experience full of flavor and tradition. Please note gathiya is served without accompaniments. Kindly select your preferred chutneys, kadhi, papaya sambharo and more from the add on section.",
     price: 850,
     category: "Gathiya",
-    image: resolveMenuImage("Fafda_Gathiya.webp"),  // TODO: photo not in images/menu-items yet -- shows placeholder until added
+    image: resolveMenuImage("Fafda_Gathiya.webp"),
     isVeg: true,
   },
   // ---- Sides & Snacks ----

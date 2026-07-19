@@ -49,12 +49,12 @@ export const isMinimumOrderMet = (orderAmount: number): boolean => {
 };
 
 export const CONTACT_INFO = {
-  phone: "+917405407034", // TODO: replace with real business phone number
-  whatsapp: "917405407034", // TODO: WhatsApp number for orders — digits only, country code first, no + or spaces (e.g. 919876543210 for +91 98765 43210)
-  email: "thezaika24@gmail.com", // TODO: replace with real business email
-  instagram: "https://www.instagram.com/thezaika_restaurant/", // TODO: replace with real business Instagram URL
-  facebook: "https://www.facebook.com/profile.php?id=100093371474536", // TODO: replace with real business Facebook URL
-  linkedin: "https://www.linkedin.com/company/the-zaika", // TODO: replace with real business LinkedIn URL
+  phone: "+917405407034",
+  whatsapp: "917405407034",
+  email: "thezaika24@gmail.com",
+  instagram: "https://www.instagram.com/thezaika_restaurant/", 
+  facebook: "https://www.facebook.com/profile.php?id=100093371474536",
+  linkedin: "https://www.linkedin.com/company/the-zaika",
 };
 
 export const OPERATING_HOURS = {
