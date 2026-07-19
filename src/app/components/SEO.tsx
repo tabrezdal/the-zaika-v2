@@ -12,7 +12,7 @@ export function SEO({
   title = "The Zaika | Ahmedabad's Favourite Akni, Biryani & Mughlai Kitchen",
   description = "Order authentic Akni, Biryani and Mughlai dishes online from The Zaika. Freshly prepared, delivered across Ahmedabad, and rewarded through our direct ordering platform.",
   keywords = "akni ahmedabad, biryani ahmedabad, mughlai food, kathiyawadi food, online food delivery, direct ordering, loyalty rewards",
-  ogImage = "/og-image.jpg",
+  ogImage = "/og-image.webp",
   canonical,
 }: SEOProps) {
   useEffect(() => {
