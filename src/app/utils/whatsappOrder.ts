@@ -50,7 +50,7 @@ export function buildWhatsAppOrderMessage(
     ``,
     `*Payment Preference:* ${customer.paymentPreference}`,
     ``,
-    `_Sent from thezaika.com — please confirm to start preparing my order._`,
+    `_Sent from thezaika.vercel.app — please confirm to start preparing my order._`,
   ].join("\n");
 }
 
