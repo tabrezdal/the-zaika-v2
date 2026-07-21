@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Zaika | Ahmedabad's Favourite Akni, Biryani & Mughlai Kitchen</title>
+    <meta name="description" content="Order authentic Akni, Biryani and Mughlai dishes online from The Zaika. Freshly prepared, delivered across Ahmedabad." />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>The Zaika | Ahmedabad's Favourite Akni, Biryani & Mughlai Kitchen</title>
-      <meta name="description" content="Order authentic Akni, Biryani and Mughlai dishes online from The Zaika. Freshly prepared, delivered across Ahmedabad." />
-      <meta name="robots" content="index, follow" />
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-      
-    </head>
+    <!-- Open Graph (static baseline -- WhatsApp/Facebook/Twitter preview bots generally
+         don't run JS, so this needs to exist here, not just in SEO.tsx) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Zaika" />
+    <meta property="og:title" content="The Zaika | Ahmedabad's Favourite Akni, Biryani & Mughlai Kitchen" />
+    <meta property="og:description" content="Order authentic Akni, Biryani and Mughlai dishes online from The Zaika. Freshly prepared, delivered across Ahmedabad." />
+    <meta property="og:image" content="https://thezaika.vercel.app/og-image.webp" />
+    <meta property="og:url" content="https://thezaika.vercel.app/" />
+    <meta property="og:locale" content="en_IN" />
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Zaika | Ahmedabad's Favourite Akni, Biryani & Mughlai Kitchen" />
+    <meta name="twitter:description" content="Order authentic Akni, Biryani and Mughlai dishes online from The Zaika. Freshly prepared, delivered across Ahmedabad." />
+    <meta name="twitter:image" content="https://thezaika.vercel.app/og-image.webp" />
+
+    <!-- Mobile browser chrome color -->
+    <meta name="theme-color" content="#D89216" />
+
+    <!-- iOS home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="The Zaika" />
+
+    <!-- Restaurant structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "The Zaika",
+      "image": "https://thezaika.vercel.app/og-image.webp",
+      "url": "https://thezaika.vercel.app/",
+      "telephone": "+917405407034",
+      "servesCuisine": ["Indian", "Mughlai", "Biryani"],
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "TP-85, Sarkhej",
+        "addressLocality": "Ahmedabad",
+        "addressRegion": "Gujarat",
+        "postalCode": "380055",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "23:00"
+      },
+      "menu": "https://thezaika.vercel.app/menu",
+      "sameAs": [
+        "https://www.instagram.com/thezaika_restaurant/",
+        "https://www.facebook.com/profile.php?id=100093371474536"
+      ]
+    }
+    </script>
+
+    <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
