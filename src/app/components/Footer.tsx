@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <h2 className="text-white font-semibold mb-4">Company</h2>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="hover:text-orange-500 transition-colors">
@@ -25,7 +25,7 @@ export function Footer() {
                 {/* <Link to="/loyalty" className="hover:text-orange-500 transition-colors">
                   Loyalty Program
                 </Link> */}
-                <span className="text-gray-500 cursor-not-allowed" title="Launching soon">
+                <span className="text-gray-400 cursor-not-allowed" title="Launching soon">
                   Loyalty Program <span className="text-xs">(Soon)</span>
                 </span>
               </li>
@@ -33,7 +33,7 @@ export function Footer() {
                 {/* <Link to="/referral" className="hover:text-orange-500 transition-colors">
                   Referral Program
                 </Link> */}
-                <span className="text-gray-500 cursor-not-allowed" title="Launching soon">
+                <span className="text-gray-400 cursor-not-allowed" title="Launching soon">
                   Referral Program <span className="text-xs">(Soon)</span>
                 </span>
               </li>
@@ -42,7 +42,7 @@ export function Footer() {
 
           {/* Menu */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Menu</h3>
+            <h2 className="text-white font-semibold mb-4">Menu</h2>
             <ul className="space-y-2">
               <li><Link to="/menu?category=Akni" className="hover:text-orange-500 transition-colors">Akni</Link></li>
               <li><Link to={`/menu?category=${encodeURIComponent("Rice & Biryani")}`} className="hover:text-orange-500 transition-colors">Biryani</Link></li>
@@ -53,10 +53,10 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Support</h3>
+            <h2 className="text-white font-semibold mb-4">Support</h2>
             <ul className="space-y-2">
               <li>
-                <span className="text-gray-500 cursor-not-allowed" title="Launching soon">
+                <span className="text-gray-400 cursor-not-allowed" title="Launching soon">
                   Track Order <span className="text-xs">(Soon)</span>
                 </span>
               </li>
@@ -80,7 +80,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+            <h2 className="text-white font-semibold mb-4">Contact Us</h2>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
@@ -100,16 +100,16 @@ export function Footer() {
               </li>
             </ul>
             <div className="flex gap-4 mt-6">
-              <a href={CONTACT_INFO.facebook} className="hover:text-orange-500 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href={CONTACT_INFO.facebook} className="hover:text-orange-500 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href={CONTACT_INFO.instagram} className="hover:text-orange-500 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href={CONTACT_INFO.instagram} className="hover:text-orange-500 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
               {/* <a href="#" className="hover:text-orange-500 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a> */}
-              <a href={CONTACT_INFO.linkedin} className="hover:text-orange-500 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href={CONTACT_INFO.linkedin} className="hover:text-orange-500 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -118,7 +118,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
           <p className="text-gray-400 mb-2">Authentic Akni, Biryani & Mughlai Flavours Delivered Across Ahmedabad.</p>
-          <p className="text-gray-500">Made with passion. Served with pride.</p>
+          <p className="text-gray-400">Made with passion. Served with pride.</p>
           <p className="mt-2">&copy; 2026 The Zaika. All rights reserved.</p>
         </div>
       </div>

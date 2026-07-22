@@ -18,7 +18,7 @@ export function ContactPage() {
                   <Phone className="w-6 h-6 text-orange-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1">Phone</h3>
+                  <h2 className="font-bold mb-1">Phone</h2>
                   <a href={`tel:${CONTACT_INFO.phone}`} className="text-gray-700 hover:text-orange-500 transition-colors">
                     {CONTACT_INFO.phone}
                   </a>
@@ -31,7 +31,7 @@ export function ContactPage() {
                   <Mail className="w-6 h-6 text-orange-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1">Email</h3>
+                  <h2 className="font-bold mb-1">Email</h2>
                   <a href={`mailto:${CONTACT_INFO.email}`} className="text-gray-700 hover:text-orange-500 transition-colors">
                     {CONTACT_INFO.email}
                   </a>
@@ -44,7 +44,7 @@ export function ContactPage() {
                   <MapPin className="w-6 h-6 text-orange-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1">Address</h3>
+                  <h2 className="font-bold mb-1">Address</h2>
                   <p className="text-gray-700">TP-85, Sarkhej</p>
                   <p className="text-gray-700">Ahmedabad, Gujarat 380055</p>
                 </div>
@@ -55,7 +55,7 @@ export function ContactPage() {
                   <Clock className="w-6 h-6 text-orange-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1">Operating Hours</h3>
+                  <h2 className="font-bold mb-1">Operating Hours</h2>
                   <p className="text-gray-700">Monday - Sunday</p>
                   <p className="text-gray-700">11:00 AM - 11:00 PM</p>
                 </div>
