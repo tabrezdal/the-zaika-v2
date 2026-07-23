@@ -27,7 +27,7 @@ export function OrderSuccessPage() {
 
           <div className="space-y-3">
             <div
-              className="w-full bg-gray-200 text-gray-500 py-3 rounded-lg font-medium text-center cursor-not-allowed"
+              className="w-full bg-gray-200 text-gray-600 py-3 rounded-lg font-medium text-center cursor-not-allowed"
               title="Launching soon"
             >
               Track Your Order (Coming Soon)

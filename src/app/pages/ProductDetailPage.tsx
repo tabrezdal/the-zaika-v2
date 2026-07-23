@@ -82,7 +82,7 @@ export function ProductDetailPage() {
 
             {product.ingredients && (
               <div>
-                <h3 className="font-bold mb-2">Ingredients</h3>
+                <h2 className="font-bold mb-2">Ingredients</h2>
                 <div className="flex flex-wrap gap-2">
                   {product.ingredients.map((ingredient, index) => (
                     <span
@@ -98,7 +98,7 @@ export function ProductDetailPage() {
 
             {product.spiceLevel !== undefined && product.spiceLevel > 0 && (
               <div>
-                <h3 className="font-bold mb-2">Spice Level</h3>
+                <h2 className="font-bold mb-2">Spice Level</h2>
                 <div className="flex gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <div
@@ -114,7 +114,7 @@ export function ProductDetailPage() {
 
             {product.rating && (
               <div>
-                <h3 className="font-bold mb-2">Rating</h3>
+                <h2 className="font-bold mb-2">Rating</h2>
                 <div className="flex items-center gap-2">
                   <div className="flex gap-1">
                     {Array.from({ length: 5 }).map((_, i) => (
@@ -136,11 +136,12 @@ export function ProductDetailPage() {
 
             {/* Quantity Selector */}
             <div>
-              <h3 className="font-bold mb-2">Quantity</h3>
+              <h2 className="font-bold mb-2">Quantity</h2>
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="w-10 h-10 flex items-center justify-center border-2 border-gray-300 rounded-lg hover:border-orange-600 transition-colors"
+                  aria-label="Decrease quantity"
                 >
                   <Minus className="w-5 h-5" />
                 </button>
@@ -148,6 +149,7 @@ export function ProductDetailPage() {
                 <button
                   onClick={() => setQuantity(quantity + 1)}
                   className="w-10 h-10 flex items-center justify-center border-2 border-gray-300 rounded-lg hover:border-orange-600 transition-colors"
+                  aria-label="Increase quantity"
                 >
                   <Plus className="w-5 h-5" />
                 </button>

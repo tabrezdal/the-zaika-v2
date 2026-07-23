@@ -63,7 +63,7 @@ export function Header() {
               href={AGGREGATOR_LINKS.swiggy}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1.5 text-xs font-medium border border-orange-500 text-orange-500 rounded-full hover:bg-orange-50 transition-colors whitespace-nowrap"
+              className="px-3 py-1.5 text-xs font-medium border border-orange-700 text-orange-700 rounded-full hover:bg-orange-50 transition-colors whitespace-nowrap"
             >
               Order on Swiggy
             </a>
@@ -137,7 +137,7 @@ export function Header() {
                   href={AGGREGATOR_LINKS.swiggy}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center px-3 py-2 text-sm font-medium border border-orange-500 text-orange-500 rounded-lg"
+                  className="flex-1 text-center px-3 py-2 text-sm font-medium border border-orange-700 text-orange-700 rounded-lg"
                 >
                   Swiggy
                 </a>
